@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班夫旅遊行程</title>
+    <link rel="stylesheet" href="all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  </head>
+<body>
+  <header>
+      <h1>班夫旅遊行程</h1>
+      <p>2025/09/07 - 2025/09/19</p>
+      <div id="countdown" class="countdown-timer">
+        距離出發還有：<span id="days">--</span> 天 
+        <span id="hours">--</span> 小時 
+        <span id="minutes">--</span> 分 
+        <span id="seconds">--</span> 秒
+      </div>
+  </header>
+  <nav>
+    <button onclick="showDay('overview')">首頁</button>
+    <button onclick="showDay('calender')">行程</button>
+    <button onclick="showDay('accommodation')">住宿</button>
+    <button onclick="showDay('restaurantn')">餐廳</button>
+    <button onclick="showDay('photopoint')">景點</button>
+    <button onclick="showDay('payactive')">活動</button>
+    <button onclick="showDay('shopping')">工具</button>
+    <button onclick="showDay('package')">行李</button>
+    <button onclick="showDay('weather')">天氣</button>
+    <button onclick="showDay('contact')">聯絡</button>
+  </nav>
+<div class="contanier">
+  <div id="overview" class="day-section active">
+    <div class="activity">
+      <h3>加拿大班夫旅遊行程</h3>
+      <p>2025/9/7~2025/9/19</p>
+        <div class="viewstyle">
+          <div class="viewpoint" onclick="showDay('calender')">
+            <p class="overview_emo">📅</p><p>行程總覽</p>
+          </div>
+          <div class="viewpoint" onclick="showDay('accommodation')">
+            <p class="overview_emo">🏨</p><p>住宿資訊</p>
+          </div>
+          <div class="viewpoint" onclick="showDay('restaurant')">
+             <p class="overview_emo">🍽️</p><p>餐廳推薦</p>
+          </div>
+          <div class="viewpoint" onclick="showDay('photopoint')">
+             <p class="overview_emo">🏞️</p><p>人氣景點</p>
+          </div>
+          <div class="viewpoint" onclick="showDay('payactive')">
+             <p class="overview_emo">🚡</p><p>活動精選</p>
+          </div>
+          <div class="viewpoint" onclick="showDay('shopping')">
+             <p class="overview_emo">🛒</p><p>購物工具</p>
+          </div>
+          <div class="viewpoint" onclick="showDay('package')">
+             <p class="overview_emo">🧳</p><p>行前提醒</p>
+          </div>
+          <div class="viewpoint" onclick="showDay('weather')">
+             <p class="overview_emo">🌤️</p><p>天氣資訊</p>
+          </div>
+          <div class="viewpoint" onclick="showDay('contact')">
+             <p class="overview_emo">☎️</p><p>緊急聯絡</p>
+          </div>
+        </div>
+    </div>
+  </div>  
+  <div id="calender" class="day-section">
+    <div class="calendar-nav">
+            <div class="calendar-day" onclick="showDay('day1')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4novnI0MML70BKmV8U_Px5rGiiD0mSV5HU3YpgXSlayJQawDLIViE4DB6SMDJOYINHzn2-qDFzv8iCyBGHGoEY5ZbHMz0usGwtNRHtqouy_lOyTSPyhHQBnrnWN4qHO5lM3oBjKQ=w300-h212-p-k-no" alt="溫哥華">
+                <div class="tag">Day 1</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/7（日）</p>
+                <p>台灣 ✈️ 溫哥華</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day2')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noOLc9cZcFFl4x2vRWkhhoPs3m8dw9K-kaSFIoW9xHogxeLKDU5ALVILbq2LBvdl9Dv1rcCc2i1XNWoxFGMr_0UJCVFR6R27Sknzohs6bKQFhPHXdQ0-yisprPTmmtU09p5SBWHIA=w408-h544-k-no" alt="溫哥華市區">
+                <div class="tag">Day 2</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/8（一）</p>
+                <p>溫哥華市區遊</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day3')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noO9Gk54jUhqboSxnDdTNj2RQe03e2flj6FMQ5S_mPsTpsw38kXsJoTZIEN9caDTCad3FvRbobc5Yy2OXpRW3SXzw7BXbxqGsWMN0wGWpxhtBOl7fncKGiKftAxtN7YiIe0Y4KRrg=w408-h510-k-no" alt="卡加利">
+                <div class="tag">Day 3</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/9（二）</p>
+                <p>卡加利 ✈️ 愛德蒙頓</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day4')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqatx3EO0eIPjjYz68dHWPdffTgTR1cgJdTtwoNMPfsMXZBH3_SEjsE8XZy16HrrqHrjHMr3iWPDCMVX_t_SesIPoEAlxahDl38NDHcSJnr783a5AhlZxN4W5eDjpczbVuFzrO5wA=w408-h873-k-no" alt="Hinton">
+                <div class="tag">Day 4</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/10（三）</p>
+                <p>移動日-前往 Hinton</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day5')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqt5V_9VegrbDbroF3nyB67ZeOFWYcdqrQpg0QkkSyp5yr0SS-n4ktxm3xMYLoSvaTperyq0Vv1b4eQKy0_25ssKy5yizIBrHfdfTulBqWLV-sDihc5fu2Qb_QnG154HGoSZziCTA=w408-h272-k-no" alt="馬林湖">
+                <div class="tag">Day 5</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/11（四）</p>
+                <p>賈斯珀國家公園-Maligne 湖區</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day6')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqHvwX_F1WqiIutn7NM4SRH0MohCCZtU8Ob_61BcELGNBNIR1RR5dSoyYfmJMQeIwJ0q7qIJWcwlnbCESui3n58h0lGW5NAX4XHsuscHW9yZueJZXwKqCaZi9rT4ip1IPD9j60=w408-h306-k-no" alt="Jasper">
+                <div class="tag">Day 6</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/12（五）</p>
+                <p>Jasper 周邊遊</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day7')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npX28We1CHGHm-Rq9Jcaaucji4uinL02D-gX2yTfBYTSndXTzMjOleXU0PpF2zz2foe8w1r_kpDA_upToP3ndjAp8cLGxDdqTk5ZwbiG_kB0jR0yngXLIfwBUf7whyCGebXgnPb2w=w408-h272-k-no" alt="Banff">
+                <div class="tag">Day 7</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/13（六）</p>
+                <p>移動日-前往班夫</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day8')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4not3zfMhfJiredogmkw4GoQ012cTbNaQPH06D-WF89f3Ge_cEPAj23I3FzTX-JjoXxZYCa2cdrakvAkfsyOwRMy1g5WG8WfVLNcszGGhBfn_tkGBCj1KYPkM_7vg7uLqOQzn3GY=w408-h263-k-no" alt="Yoho">
+                <div class="tag">Day 8</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/14（日）</p>
+                <p>Yoho 國家公園</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day9')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqkg3oWSjdV5tArjlRPTAgmUCP56-ARncjf6c-Z9kf-i3g6pfM3MRtJ9OMkxMW7FVLgLUbr10Z7St4RHzlvgDy041c1WUwE4jKNONDi0zltDu7Ze6pXrPZcQX4knvn1GRiG2BTr_g=w408-h544-k-no" alt="Johnston Canyon">
+                <div class="tag">Day 9</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/15（一）</p>
+                <p>Johnston Canyon 健行</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day10')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqiPfZf058QQAU1ebPqa1KEE1ZzyofYMvHgBsqovEBmsLU2RCCOyWkt2M56w2CWA_IyQGYhfy_p_sDdL9Weo4ubeUakanbIZtxVh5MDRneWv5oRzFU0Gsxc1apiQJxP0mmxNxMmTA=w408-h306-k-no" alt="Lake Louise">
+                <div class="tag">Day 10</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/16（二）</p>
+                <p>Lake Louise & Moraine Lake</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day11')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npqmBMBh20JFbj5RSC6rprBzMM_OJVuyhcEC53lmSjkTMNsgk2zR9seC0t86znzj5APixiip7vKgmBgX77d16Ky5Y6sfKqKpa4e-4bZenhvmR78PxwxYYwMyRd8aFNJh5OEQYsdQg=w300-h212-p-k-no" alt="卡加利">
+                <div class="tag">Day 11</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/17（三）</p>
+                <p>移動日-前往卡加利</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day12')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqsx0gpqUg9Ol9PPn3LdTdJZa3mQ9X1UWxuOcRewxqvL2jRbfJEZjC0xz7y208vXbAKONmk0M2FcUKpyAnt63HMmyMMynXxS2FR3AaJGJ0TsJDoqAak8NjofHsWsPf_00yCJfUhRQ=w300-h212-p-k-no" alt="卡加利市區">
+                <div class="tag">Day 12</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/18（四）</p>
+                <p>卡加利自由行</p>
+              </div>
+            </div>
+            <div class="calendar-day" onclick="showDay('day13')">
+              <div class="calendar-left">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipME5muWtT3Jn75DMnZcqeSknvHwPEbX_NPm7IRE=w262-h104-p-k-no" alt="艾柏塔">
+                <div class="tag">Day 13</div>
+              </div>
+              <div class="calendar-right">
+                <p>9/19（五）</p>
+                <p>卡加利 ✈️ 溫哥華 ✈️ 台灣</p>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div id="content">
+    <div id="day1" class="day-section">
+      <div class="activity">
+        <h3>Day 1 (9/7)</h3>
+        <div class="tourist_spot">
+        <div class="iconstyle">🛫</div>
+        <div>
+            <p class="timestyle">23:30(台灣時間)</p>
+            <p>桃園機場</p>
+        </div>
+        </div>
+        <div class="transtime">✈️ 約 10 小時 45 分鐘</div>
+        <div class="tourist_spot">
+            <div class="iconstyle">🛬</div>
+            <div>
+                <p class="timestyle">19:15(加拿大時間)</p>
+                <p>抵達溫哥華機場</p>
+            </div>
+        </div>
+        <div class="transtime">🚐 約 20 分鐘</div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">20:30</p> 
+            <p>住宿地點：溫哥華 Vancouver</p>
+            <div class="map-link">
+            <a href="https://maps.app.goo.gl/LKWPi6FYYkHYu7AK9" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day2" class="day-section">
+      <div class="activity">
+        <h3>Day 2 (9/8)</h3>
+        <div class="tourist_spot">
+        <div class="iconstyle">🏨</div>
+            <div>
+                <p class="timestyle">9:00</p> 
+                <p>民宿出發</p>
+            </div>
+        </div>
+        <div class="transtime">🚐 </div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr5SJjpJgivLufmJKblTGovADt6666GinwpbnBStHjn2cLU1CDJCDW2QEv1eRaGh2fsZ73aFNBXfreqCOcLTuh4EpkVwolbG3-pL3nJI3ux6as5yNcPF8daTAc46JCGhQ-cd5iZGw=w408-h278-k-no" alt="溫哥華市區">
+          <div>
+            <p class="timestyle">一日遊</p> 
+            <p>溫哥華市區</p>
+            <div class="map-link">
+            <a href="https://maps.google.com/?q=溫哥華" target="_blank">查看城市地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚐 </div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">20:00</p> 
+            <p>回到民宿</p>
+            <div class="map-link">
+            <a href="https://maps.app.goo.gl/LKWPi6FYYkHYu7AK9" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day3" class="day-section">
+  <div class="activity">
+    <h3>Day 3 (9/9)</h3>
+    <div class="tourist_spot">
+      <div class="iconstyle">🧳</div>
+      <div>
+        <p class="timestyle">6:00</p> 
+        <p>搭接駁車前往溫哥華機場</p>
+      </div>
+    </div>
+    <div class="transtime">🚐 約 20 分鐘</div>
+    <div class="tourist_spot">
+      <div class="iconstyle">🛫</div>
+      <div>
+        <p class="timestyle">6:30</p> 
+        <p>溫哥華機場 check in</p>
+      </div>
+    </div>
+    <div class="transtime">✈️ 約 1 小時 30 分鐘</div>
+    <div class="tourist_spot">
+      <div class="iconstyle">🛬</div>
+      <div>
+        <p class="timestyle">10:57</p> 
+        <p>抵達卡加利機場</p>
+      </div>
+    </div>
+    <div class="transtime">🚶 約 5 分鐘</div>
+    <div class="tourist_spot">
+      <div class="iconstyle">🚗</div>
+      <div>
+        <p class="timestyle">12:00</p> 
+        <p>Avis Canada 卡加利機場租車</p>
+      </div>
+    </div>
+    <div class="transtime">🚗 約 20 分鐘</div>
+    <div class="tourist_spot">
+      <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrHaObIbOPzCH8ouh5YcqmKfx9EXNilRk_iGw6C5_QaVenzdGd5qUysT99af4KdLXjWzQ_tubNXpzGMCANaOdjAG2Bk7NUz7zzT_YzMCpwmUAJxfpH_jE5R3mxmL5tRfM-n7rER=w426-h240-k-no" alt="十字鐵磨購物中心">
+      <div>
+        <p class="timestyle">13:00 (午餐)</p> 
+        <p>十字鐵磨購物中心</p>
+        <div class="map-link">
+          <a href="https://maps.app.goo.gl/uEnZ5CKLcbxJCXtK9" target="_blank">查看地圖</a>
+        </div>
+      </div>
+    </div>
+    <div class="transtime">🚗 約 3 小時</div>
+    <div class="tourist_spot">
+      <div class="iconstyle">🏨</div>
+      <div>
+        <p class="timestyle">17:00</p> 
+        <p>住宿地點：愛德蒙頓 Edmonton</p>
+        <div class="map-link">
+          <a href="https://maps.app.goo.gl/1DcnXBkJgGBxkwTh7" target="_blank">查看住宿地圖</a>
+        </div>
+      </div>
+    </div>
+    <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+    </div>
+  </div>
+    </div>
+    <div id="day4" class="day-section">
+  <div class="activity">
+    <h3>Day 4 (9/10)</h3>
+    <div class="tourist_spot">
+      <div class="iconstyle">🧳</div>
+      <div>
+        <p class="timestyle">9:00</p> 
+        <p>民宿 check out</p>
+      </div>
+    </div>
+    <div class="transtime">🚗 約 3 小時</div>
+    <div class="tourist_spot">
+      <div class="iconstyle">🏨</div>
+      <div>
+        <p class="timestyle">12:00</p> 
+        <p>住宿地點：Hinton民宿</p>
+        <div class="map-link">
+          <a href="https://maps.app.goo.gl/AqyZwmeh2AVjy4RH7" target="_blank">查看住宿地圖</a>
+        </div>
+      </div>
+    </div>
+    <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+    </div>
+  </div>
+    </div>
+    <div id="day5" class="day-section">
+      <div class="activity">
+        <h3>Day 5 (9/11)</h3>
+        <div class="tourist_spot">
+        <div class="iconstyle">🏨</div>
+            <div>
+                <p class="timestyle">9:00</p> 
+                <p>民宿出發</p>
+            </div>
+        </div>
+        <div class="transtime">🚗 約 1 小時</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npJHBFpOaT8A30v5LbYbLMJNXGvv69z9En3cRUBewL9AeJ0xsf88CyxN2PnH25gNgCtlEVDvXpwtNfqQOa5Ll5z9mBNlnWnmHhNa9lTi1sDQj4FjarQ48N4oCJ11XkD8ryFRviS=w408-h544-k-no" alt="Maligne Canyon">
+          <div>
+            <p class="timestyle">10:00 (停留30分鐘)</p> 
+            <p>Maligne Canyon</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/M31ubGyEH7Hv1pRx7" target="_blank">查看景點地圖</a>
+              </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 30 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrNeLOMw8imDdb4sLWhlDlVTKt7KhOAtVwCIymw7KZX3FOKTrQ73vk4mQah6AVrnmfLUDmohxcHp0hlW8b3CTKjhQe3-X17Tiv3N95O0QWOJwv30vsVUsFPFK-czJQFnDnpIAqA=w408-h272-k-no" alt="Medicine Lake">
+          <div>
+            <p class="timestyle">11:00 (停留30分鐘)</p> 
+            <p>Medicinde Lake</p>
+            <div class="map-link">
+              <a href="https://www.google.com/maps/place/Medicine+Lake" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 15 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqt5V_9VegrbDbroF3nyB67ZeOFWYcdqrQpg0QkkSyp5yr0SS-n4ktxm3xMYLoSvaTperyq0Vv1b4eQKy0_25ssKy5yizIBrHfdfTulBqWLV-sDihc5fu2Qb_QnG154HGoSZziCTA=w408-h272-k-no" alt="馬林湖">
+          <div>
+            <p class="timestyle">11:45 (停留2.5小時)</p> 
+            <p>Maligne Lake</p>
+            <div class="map-link">
+              <a href="https://maps.google.com/?q=Maligne+Lake" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 1.5 小時</div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">16:00</p> 
+            <p>回到民宿</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/AqyZwmeh2AVjy4RH7" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day6" class="day-section">
+      <div class="activity">
+        <h3>Day 6 (9/12)</h3>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">9:00</p> 
+            <p>民宿出發</p>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 30 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/p/AF1QipOupLgeTdI8VASeVFavi6oLqbzEUg8LZZW63-0=w408-h272-k-no" alt="Jasper house national historic site">
+          <div>
+            <p class="timestyle">9:30 (停留 25 分鐘)</p> 
+            <p>Jasper house national historic site</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/8vpRWzobqDXQpVTd6" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 5 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqwk3wUmF_02ACfy2nqyKVG71d-o-E8A-UJB0-2ESR2g36H_b2q-Ny7TABSE2NEyToD6tINoj-TKE5P_g1Tm4WUNfFsIQOrFLJCY0l2nDU-Rm-4Rmr_WmMHp8hvhZcDyCxnRHxJBQ=w408-h306-k-no" alt="Jasper lake San dunes">
+          <div>
+            <p class="timestyle">10:00 (停留 15 分鐘)</p> 
+            <p>Jasper lake San dunes</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/JFxJip8pXEELod3u9" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 26 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqbk-fylvXV71qdLzv2dgm5Ph-RzU5zIG1pNSOecTpfX4xfdHlDuSaxXinWcoPGqVHRBHET8FBo1jnBNZ44PR9__oxQ9F3JJP8HMoI_GldbzGQ3Ua8eCKUMAzOGo7G1mSqBiAZPGg=w408-h306-k-no" alt="Jasper SkyTram">
+          <div>
+            <p class="timestyle">10:40 (停留 3 小時)</p> 
+            <p>Jasper SkyTram</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/kgYPdZrkdLqvyAbC7" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 8 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4no2uDehcqw7lVqsRenjSCKsR9fxGpyRLw8WsBxl0Kp-fwSvYFPWa1ETbDXm-8IXZM3Tvp0qXX_nSVk1qL_F-J5Ut01fDZbbj3ObFQLDFW_fKM7JTNPZWZ8XwowD0G02uw2T-2g=w507-h240-k-no" alt="Jasper市區">
+          <div>
+            <p class="timestyle">14:00</p> 
+            <p>Jasper市區</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/Akz1PjsmCz9LjtGY7" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 1 小時</div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">20:00</p> 
+            <p>回到民宿</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/AqyZwmeh2AVjy4RH7" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day7" class="day-section">
+      <div class="activity">
+        <h3>Day 7 (9/13)</h3>
+        <div class="tourist_spot">
+          <div class="iconstyle">🧳</div>
+          <div>
+            <p class="timestyle">9:00</p> 
+            <p>民宿check out</p>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 1 小時 15 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noHgQQxrcLtAir1sQ4HSmvO6LGN_l2241DmVo77tq9gUuigehF2Uwy5BFXtXD7VaemnpQ-FqfKyOzweI93uC-pCBEx28okLNbvD4lTlWSp53UscfAKjOnZRiQX8lxCCyMvpg44=w408-h272-k-no" alt="Athabasca Falls">
+          <div>
+            <p class="timestyle">10:15 (停留 30 分鐘)</p> 
+            <p>Athabasca Falls</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/NJD46a1MZgmZ9XuP6" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 15 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq2Y76Qeqj74s_JkwFHrUiHqOaNzIt2w7P_VkKLCXCBRYxfP8mRfb9o4uteP3YljpnzqD6R6xWd_WdCQxyNcVFC-EBA_PWJD3x0a78qfEi-rDsZTtDUM7tyzi0yLcdMGJDz3wAqiA=w408-h306-k-no" alt="Sunwapta Falls">
+          <div>
+            <p class="timestyle">11:00 (停留 30 分鐘)</p> 
+            <p>Sunwapta Falls</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/UcuEfBugLQgCLidu9" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 40 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npPqwWwJ6Ct-cJ877eTmdXldZ5UkmzSr0qxOLPgCkqPutsFJ-E-0BeUQ1ciJfPUiJlEdM57k_0oHn0ysDOrS8tEMdedST4r5ukpKuioT2X8E-5Fe_BdIYEqOCy4jyt1AIUF8ek=w408-h306-k-no" alt="哥倫比亞冰原">
+          <div>
+            <p class="timestyle">12:10 (停留 2 小時)</p> 
+            <p>哥倫比亞冰原</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/gsXTevFgAHYrP7w99" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 2 小時 15 分鐘</div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">17:00</p> 
+            <p>住宿地點：Canmore民宿</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/Etj28BT8ynpavfyA6" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day8" class="day-section">
+      <div class="activity">
+        <h3>Day 8 (9/14)</h3>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">9:00</p> 
+            <p>民宿出發</p>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 1 小時 18 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqYCnJCNWM2J3LsEnV9DGRWCU0JKgkE_mhiDlatyqwqg9qERc18vBf12ZKfp403-4EVlitcPClJ2h1kv-I15x6TiHNUovOED6K--tYfYRQaVK_xum5Rsn9w5oRL7g5dsNPfvTGY=w408-h306-k-no" alt="翡翠湖">
+          <div>
+            <p class="timestyle">10:18 (停留 30 分鐘)</p> 
+            <p>Emerald Lake</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/dktoj6h5icdC1ac5A" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 7 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npgZBixmlUdz6DRotggN4sgTyGZN9CKYx3by9BL9NU4xOq8Vs_QJf54u16IsnXg8gtlS_-XV5FFwU1ARM4XWO2NYrQst_ftJThmfjo9gqx1AawVpTP1MZ5PN1elP7Jsuxw-W5BuNA=w408-h281-k-no" alt="Natural bridge">
+          <div>
+            <p class="timestyle">10:55 (停留 30 分鐘)</p> 
+            <p>Natural bridge</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/q1qfXyQwjKsuUuC99" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 38 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqkiaVX8z7HIETrTcifF50htxbTiTuUbbAVqOiYArkVn4uuznJSUMDqxO8cTP3XHPH083UG_VlimuXT-KEfEcRaCVzdtgkQEjpgM-t0-TyEZoKZdnzxisgeGKGCuTKg5qfkzwqJ=w408-h306-k-no" alt="塔卡考娃瀑布">
+          <div>
+            <p class="timestyle">12:00 (停留 1 小時)</p> 
+            <p>Takakkaw falls</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/8QVYKxMiFWCxLxJfA" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 1 小時 13 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrqycjqyaRHUIMmp5ibwe8RxVDFU3YHNz8AzKaSoo8IatXun1N6ViMz04xfSC9uoYkj8-ZzLtaNwB1tlIzAt0S5FHnObdrJrIsCET5aUPsrFA9Jj024IdBA8pvLu8RHalBjcyet=w408-h272-k-no" alt="沛托湖">
+          <div>
+            <p class="timestyle">14:15 (停留 1 小時 45 分鐘)</p> 
+            <p>Peyto</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/G2aERmLCxdsP1Kob8" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 1 小時 21 分鐘</div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">18:00</p> 
+            <p>住宿地點：Canmore民宿</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/Etj28BT8ynpavfyA6" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day9" class="day-section">
+      <div class="activity">
+        <h3>Day 9 (9/15)</h3>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+            <div>
+                <p class="timestyle">9:00</p> 
+                <p>民宿出發</p>
+            </div>
+        </div>
+        <div class="transtime">🚗 約 43 分鐘</div>
+        <div class="tourist_spot">
+        <img class="imgstyle" src="https://lh3.googleusercontent.com/p/AF1QipN5lp-VNc1N5V84PVdyuQ_uhECJepyR9rCx1CD6=w408-h271-k-no" alt="Johnston Canyon">
+            <div>
+                <p class="timestyle">9:50 (停留 1小時 40 分鐘)</p> 
+                <p>Johnston Canyou</p>
+                <div class="map-link">
+                    <a href="https://maps.app.goo.gl/fcC86HKhuTb8oghB9" target="_blank">查看景點地圖</a>
+                </div>
+            </div>
+        </div>
+        <div class="transtime">🚗 約 28 分鐘</div>
+        <div class="tourist_spot">
+        <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqVoUOKujeuYpGUYRJuXQEuMwFZ5rJ77D1gtsoL0ZZAs7sOWwRMK27g0_hrtkJPQ7tWWv9ikkp4xlfiXY6tYFHuYxEbg2lplNIHHwLb7KE11pzEH6JKsnklM2b_fsdzQe0cl68i=w408-h306-k-no" alt="班夫市標誌">
+            <div>
+                <p class="timestyle">12:00 (午餐、購物)</p> 
+                <p>班夫市區</p>
+                <div class="map-link">
+                    <a href="https://maps.app.goo.gl/MBW5Ay1L8UtzKhzJ6" target="_blank">查看景點地圖</a>
+                </div>
+            </div>
+        </div>
+        <div class="transtime">🚗 約 20 分鐘</div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">18:00</p> 
+            <p>住宿地點：Canmore民宿</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/Etj28BT8ynpavfyA6" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day10" class="day-section">
+      <div class="activity">
+        <h3>Day 10 (9/16)</h3>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">9:00</p> 
+            <p>民宿出發</p>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 1 小時 28 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npo_2sH31Sb2qeFCWdcrXqTdY65IqKr6B6fjNJlpIKR08Wcqw7vCxPaSbwZdsRHGr4q8QKWoS7QhDA3Jfj9rNoM_SxFF68nEEYkW6Cp85S067lDd2H-YMbw_2FTZ1gzc1X_wwEm=w408-h725-k-no" alt="路易斯湖">
+          <div>
+            <p class="timestyle">10:30 </p> 
+            <p>Lake Louise</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/pCm2JuGv9QfsbL3e7" target="_blank">查看景點地圖</a>
+            </div>   
+          </div>
+        </div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-proxy/ALd4DhH9ZkBim8ZVQrYV2dweili3tksM2ViTXDHr-oC9hon29nbM7wRETLHYCzt9JYRbFifY9JvaBUz47qPJ4dUj5R7FtzpLI2aCk9Papq1MnAzlXUYZGW2BAaClBI44pp3F6xqCopOfdZ_eLQz3K7gLEELjDkIPXXyrNfmu6sjytdli-R4uT5NU3s7N3w=w408-h306-k-no" alt="Fairmont Chateau Lake Louise">
+          <div>
+            <p class="timestyle">午餐、咖啡</p> 
+            <p>Fairmont Chateau Lake Louise</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/ozAQPXWpCjPrxaGcA" target="_blank">查看餐廳地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqTwTnU9MslSQC_8Scu3N_L90DOTu-kIL1shsc0UPSuoSzR8sa-rLtlHdE_9InAWHRWpDEJ3soB4squcUjNPvCtAEFRRnniYWOVW8HX8wzTu-mTI9Zx_Xt_hsA3_6zkWzyXlDgdzw=w408-h544-k-no" alt="Lake Agnes Tea House">
+          <div>
+            <p class="timestyle">健行、餐點</p> 
+            <p>Agnes tea house</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/5z5MtFi8GirWRdQn7" target="_blank">查看餐廳地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚐 約 40 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npK2-UCWLuxuL2T9AgS7c9QttdWqU-KLnsSkmjtPrk0rr78CNYCNybzbz4g5FGGZSMsQr5o2Czul65erIug9Zzn_fc_E7iI-3ZWPKS7q1jygBqjkbOzDIj-n57Im_bFrN3DW00=w408-h306-k-no" alt="夢蓮湖">
+          <div>
+            <p class="timestyle">14:00 (依接駁車班次調整)</p> 
+            <p>Moraine lake</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/6tN6AT1bv6yJ6ZCM8" target="_blank">查看景點地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="transtime">🚐 約 40 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqVoUOKujeuYpGUYRJuXQEuMwFZ5rJ77D1gtsoL0ZZAs7sOWwRMK27g0_hrtkJPQ7tWWv9ikkp4xlfiXY6tYFHuYxEbg2lplNIHHwLb7KE11pzEH6JKsnklM2b_fsdzQe0cl68i=w408-h306-k-no" alt="班夫市標誌">
+          <div>
+            <p class="timestyle">16:00 </p> 
+            <p>Lake Louise</p>
+          </div>
+        </div>
+        <div class="transtime">🚗 約 1 小時 28 分鐘</div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">18:00</p> 
+            <p>住宿地點：Canmore民宿</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/Etj28BT8ynpavfyA6" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day11" class="day-section">
+      <div class="activity">
+        <h3>Day 11 (9/17)</h3>
+        <div class="tourist_spot">
+          <div class="iconstyle">🧳</div>
+          <div>
+            <p class="timestyle">9:00</p> 
+            <p>民宿check out</p>
+          </div>
+        </div>
+        <div class="planAB">
+          <div class="planA">
+            <div class="planstyle">Plan A</div>
+            <div class="transtime">🚗 約 30 分鐘</div>
+            <div class="tourist_spot">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noqqO5OsD7FQU9t21tqjNIAOOYjmSdJanyZ1ONjwHvYAFvGT1E0fwQjWu6AMuNOglJ31jRRkOng33xFvNvsB_KFxcUmkJOShbx6lnqdTWu3AbsemuEL3bUHSzhJZyYiWAhGwkgA=w408-h280-k-no" alt="Banff Gondola">
+              <div>
+                <p class="timestyle">9:30 <br>(停留 3.5 小時)</p> 
+                <p>Banff Gondola</p>
+                <div class="map-link">
+                  <a href="https://maps.app.goo.gl/eAtveQetnypWXzxg7" target="_blank">查看景點地圖</a>
+                </div>
+              </div>
+            </div>
+            <div class="transtime">🚗 約 10 分鐘</div>
+            <div class="tourist_spot">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/p/AF1QipMXNN5YWEdaHBIM-ImXUHDJhOV0iT5eMvRURM0s=w408-h272-k-no" alt="Bow Falls Viewpoint">
+              <div>
+                <p class="timestyle">13:10 <br>(停留 30 分鐘) </p> 
+                <p>Bow falls trail</p>
+                <div class="map-link">
+                  <a href="https://maps.app.goo.gl/eaJMxCU48HDXiBGk6" target="_blank">查看景點地圖</a>
+                </div>   
+              </div>
+            </div>
+            <div class="transtime">🚗 約 10 分鐘</div>
+            <div class="tourist_spot">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4np6q1T7h-G1GFhOqJeqHMzLmoSgjiax1f1GbJsXjX8zWkhVjx1zKO5NUASuH2h-yOGP9KG6jqTIQDHxN0Jtwg5vDel28eN1eo4_z7eoDCQCDILVWB-V2pX-xNA4j4ubZNz8bM4=w408-h306-k-no" alt="Fenland Trailhead">
+              <div>
+                <p class="timestyle">13:50 <br>(停留 30 分鐘) </p> 
+                <p>Fenland trail</p>
+                <div class="map-link">
+                  <a href="https://maps.app.goo.gl/rVeyQ5EiKMD7hmey6" target="_blank">查看景點地圖</a>
+                </div>   
+              </div>
+            </div>
+            <div class="transtime">🚗 約 1 小時 33 分鐘</div>
+          </div>
+          <div class="planB">
+            <div class="planstyle">Plan B</div>
+            <div class="transtime">🚗 約 1 小時</div>
+            <div class="tourist_spot">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/p/AF1QipNviKaPkpdo0kzVUfWL75qeEP1Qsn8ZOhCJIefn=w408-h612-k-no" alt="Karting">
+              <div>
+                <p class="timestyle">10:00 <br>(停留 2 小時)</p> 
+                <p>Downhill Karting by Skyline</p>
+                <div class="map-link">
+                  <a href="https://maps.app.goo.gl/LerTnrwUFx75bd3y9" target="_blank">查看景點地圖</a>
+                </div>
+              </div>
+            </div>
+            <div class="transtime">🚗 約 20 分鐘</div>
+            <div class="tourist_spot">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nokdES3PYU2pETkokIrlCSM-U_1J-F4lkjm0nb6_vTpr1SjuHK5-Re9v3Hy98WuRl2akA4WoyQ8Fg4G-ciKDBo44zupca1xLVOG7LqALQJx08ineyZXxcXRIxl49TYnMcJP3ozg=w408-h306-k-no" alt="CF Market Mall">
+              <div>
+                <p class="timestyle">12:00 <br>(午餐、購物) </p> 
+                <p>CF Market Mall</p>
+                <div class="map-link">
+                  <a href="https://maps.app.goo.gl/6DqNiSiXz9c69jP58" target="_blank">查看景點地圖</a>
+                </div>   
+              </div>
+            </div>
+            <div class="transtime">🚗 約 20 分鐘</div>
+          </div>
+        </div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">16:00</p> 
+            <p>住宿地點：卡加利 Calgary民宿 check in</p>
+            <div class="map-link">
+             <a href="https://maps.app.goo.gl/AroKKfswnKxdL8fBA" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day12" class="day-section">
+      <div class="activity">
+        <h3>Day 12 (9/18)</h3>
+        <div class="planAB">
+          <div class="planA">
+            <div class="planstyle">Plan A</div>
+            <div class="tourist_spot">
+              <div class="iconstyle">🏨</div>
+              <div>
+                <p class="timestyle">9:40</p> 
+                <p>民宿出發</p>
+              </div>
+            </div>
+            <div class="transtime">🚗 約 20 分鐘</div>
+            <div class="tourist_spot">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nob4ACs8516SekU8N08x4UYDxxyZM_fcVx3_NWwRte-tZBmqNvNMShTXC47Zw7fQ6lXIMxUqWs5DPnSdEMRucnf4kYjIeK1-D28KE5s6m8fk-9p0GvrRja78a0KrkQRxJBJI1_s=w408-h306-k-no" alt="Calgary Tower">
+              <div>
+                <p class="timestyle">10:00 <br>(停留 1 小時)</p> 
+                <p>Calgary Tower</p>
+                <div class="map-link">
+                  <a href="https://maps.app.goo.gl/F7f5QBKC7ny57xt2A" target="_blank">查看景點地圖</a>
+                </div>
+              </div>
+            </div>
+            <div class="transtime">🚗 約 10 分鐘</div>
+            <div class="tourist_spot">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq5_swMZOVo0AWPCrHaUgvjgMCw7DrPC7sgr-qPLn6UKW87a5n1R2LKvMJ3g6wO2sReclY-TiIEXcQjFfxtIs08U3BmJGuNh5F1GQekrcnaBfd4cb30Us8lFrxpaAcML03tkICV=w408-h544-k-no" alt="CF Chinook Centre">
+              <div>
+                <p class="timestyle">11:10 <br>(午餐、購物) </p> 
+                <p>CF Chinook Centre</p>
+                <div class="map-link">
+                  <a href="https://maps.app.goo.gl/C1tqnxxbdZLcS8Bk7" target="_blank">查看景點地圖</a>
+                </div>   
+              </div>
+            </div>
+            <div class="transtime">🚗 約 24 分鐘</div>
+          </div>
+          <div class="planB">
+            <div class="planstyle">Plan B</div>
+            <div class="tourist_spot">
+              <div class="iconstyle">🏨</div>
+              <div>
+                <p class="timestyle">8:30</p> 
+                <p>民宿出發</p>
+              </div>
+            </div>
+            <div class="transtime">🚗 約 16 分鐘</div>
+            <div class="tourist_spot">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqKxBBYKtTJ5m3t6tHlgVHsS4XVX7Wqbgza1zZvBpnPAvbyvGMz35Bww4RytuePT147LzSs9XbyK1Mc0SJffqkKx7SYyiX-hhdOT2rWpPMILRUkL-_GyGFfwqNJQuFBeZFpzlVx=w408-h306-k-no" alt="Wilder Institute/Calgary Zoo">
+              <div>
+                <p class="timestyle">9:00 <br>(停留 6 小時)</p> 
+                <p>Wilder Calgary Zoo</p>
+                <div class="map-link">
+                  <a href="https://maps.app.goo.gl/5GTWE6PgoRfj49WR8" target="_blank">查看景點地圖</a>
+                </div>
+              </div>
+            </div>
+            <div class="transtime">🚗 約 15 分鐘</div>
+            <div class="tourist_spot">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq5_swMZOVo0AWPCrHaUgvjgMCw7DrPC7sgr-qPLn6UKW87a5n1R2LKvMJ3g6wO2sReclY-TiIEXcQjFfxtIs08U3BmJGuNh5F1GQekrcnaBfd4cb30Us8lFrxpaAcML03tkICV=w408-h544-k-no" alt="CF Chinook Centre">
+              <div>
+                <p class="timestyle">15:15 <br>(購物) </p> 
+                <p>CF Chinook Centre</p>
+                <div class="map-link">
+                  <a href="https://maps.app.goo.gl/C1tqnxxbdZLcS8Bk7" target="_blank">查看景點地圖</a>
+                </div>   
+              </div>
+            </div>
+            <div class="transtime">🚗 約 20 分鐘</div>
+          </div>
+        </div>
+        <div class="tourist_spot">
+          <div class="iconstyle">🏨</div>
+          <div>
+            <p class="timestyle">18:00</p> 
+            <p>住宿地點：卡加利 Calgary民宿</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/AroKKfswnKxdL8fBA" target="_blank">查看住宿地圖</a>
+            </div>
+          </div>
+        </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+    <div id="day13" class="day-section">
+      <div class="activity">
+        <h3>Day 13 (9/19)</h3>
+        <div class="tourist_spot">
+        <div class="iconstyle">🧳</div>
+            <div>
+                <p class="timestyle">10:00</p> 
+                <p>民宿check out</p>
+            </div>
+        </div>
+        <div class="transtime">🚗 約 17 分鐘</div>
+        <div class="tourist_spot">
+          <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrHaObIbOPzCH8ouh5YcqmKfx9EXNilRk_iGw6C5_QaVenzdGd5qUysT99af4KdLXjWzQ_tubNXpzGMCANaOdjAG2Bk7NUz7zzT_YzMCpwmUAJxfpH_jE5R3mxmL5tRfM-n7rER=w426-h240-k-no" alt="十字鐵磨購物中心">
+          <div>
+            <p class="timestyle">10:30 (午餐、購物)</p> 
+            <p>十字鐵磨購物中心</p>
+            <div class="map-link">
+              <a href="https://maps.app.goo.gl/WmXHSakUfRf8sp8U6" target="_blank">查看購物地點</a>
+            </div> 
+          </div>
+        </div>
+        <div class="transtime">🚗 約 15 分鐘</div>
+    <div class="tourist_spot">
+      <div class="iconstyle">🛫</div>
+      <div>
+        <p class="timestyle">13:49</p> 
+        <p>卡加利機場 check in<br>15:49起飛</p>
+      </div>
+    </div>
+    <div class="transtime">✈️ 約 2 小時 52 分鐘</div>
+    <div class="tourist_spot">
+      <div class="iconstyle">🛬</div>
+      <div>
+        <p class="timestyle">17:41</p> 
+        <p>抵達溫哥華機場</p>
+      </div>
+    </div>
+    <div class="transtime">🕕 約 6 小時 4 分鐘</div>
+    <div class="tourist_spot">
+      <div class="iconstyle">🛫</div>
+      <div>
+        <p class="timestyle">23:45</p> 
+        <p>溫哥華機場 起飛</p>
+      </div>
+    </div>
+    <div class="transtime">✈️ 約 13 小時 20 分鐘</div>
+    <div class="tourist_spot">
+      <div class="iconstyle">🛬</div>
+      <div>
+        <p class="timestyle">4:05 (2025/9/21)</p> 
+        <p>抵達桃園機場</p>
+      </div>
+    </div>
+        <div class="goback">
+          <button onclick="showDay('calender')">⬅️ 返回總覽</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="accommodation" class="day-section">
+    <div class="accommodation-section">
+            <div class="room-card">
+              <h3>溫哥華的住宿</h3>
+              <div class="room-img-card">
+              <img src="https://a0.muscache.com/im/pictures/be9a367d-b914-4a38-ba5d-47297fd432f2.jpg?im_w=960" alt="溫哥華住宿">
+              <div class="date-tag">9/7~9/8</div></div>
+              <div class="room-info">
+                <p>溫哥華市中心的豪華客房</p>
+                <p class="note">7間臥室 7張床 4間衛浴</p>
+                <a href="https://www.airbnb.com.tw/rooms/928202990992852367?viralityEntryPoint=1&s=76" target="_blank"><i class="bi bi-house-door-fill"></i>airbnb</a><a href="https://maps.app.goo.gl/LKWPi6FYYkHYu7AK9?g_st=al" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="room-card">
+              <h3>愛德蒙頓的住宿</h3>
+              <div class="room-img-card">
+              <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1365351155655598036/original/015bef92-68b2-43f8-907a-abfd1d0b0041.jpeg?im_w=960" alt="愛德蒙頓的住宿">
+              <div class="date-tag">9/9</div></div>
+              <div class="room-info">
+                <p>寬敞的夢想家園-7間臥室：熱水浴缸、涼亭</p>
+                <p class="note">7間臥室 7張床 4間衛浴</p>
+                <a href="https://www.airbnb.com.tw/rooms/1365351155655598036?viralityEntryPoint=1&s=76" target="_blank"><i class="bi bi-house-door-fill"></i>airbnb</a><a href="https://maps.app.goo.gl/1DcnXBkJgGBxkwTh7?g_st=al" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="room-card">
+              <h3>欣頓的住宿</h3>
+              <div class="room-img-card">
+              <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3MzA5NDQyOTI1Mjk3Mzk1Mg%3D%3D/original/e94c9578-d01b-4aee-ac1f-1585ee17d977.jpeg?im_w=960" alt="欣頓的住宿">
+              <div class="date-tag">9/10~9/12</div></div>
+              <div class="room-info">
+                <p>4,000 平方公尺的豪華房源，配備驚豔的設備與服務</p>
+                <p class="note">7間臥室 12張床 4.5間衛浴</p>
+                <a href="https://www.airbnb.com.tw/rooms/1173094429252973952?adults=14&check_in=2025-09-09&check_out=2025-09-12&children=2&search_mode=regular_search&source_impression_id=p3_1748357407_P3liOyMwfh8WjNiU&previous_page_section_name=1000&federated_search_id=ee2bfe17-d13c-435d-86cf-3b31e9310a92" target="_blank"><i class="bi bi-house-door-fill"></i>airbnb</a><a href="https://maps.app.goo.gl/AqyZwmeh2AVjy4RH7?g_st=al" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="room-card">
+              <h3>坎莫爾的住宿</h3>
+              <div class="room-img-card">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1373617974918828883/original/e939c829-c7d3-4141-987c-ac0265b41d82.jpeg?im_w=960" alt="坎莫爾的住宿">
+                <div class="date-tag">9/13~9/16</div>
+              </div>
+              <div class="room-info">
+                <p>[全新]私人按摩浴池*山景* 19人*空調*豪華</p>
+                <p class="note">6間臥室 11張床 7間衛浴</p>
+                <a href="https://www.airbnb.com.tw/rooms/1398713362784817649?adults=14&check_in=2025-09-13&children=2&guests=9&search_mode=regular_search&source_impression_id=p3_1748356189_P3BoEiX77O_tA9QU&previous_page_section_name=1000&federated_search_id=f8893357-77f2-4665-b2f0-30e129bd3524&check_out=2025-09-17" target="_blank"><i class="bi bi-house-door-fill"></i>airbnb</a><a href="https://maps.app.goo.gl/Etj28BT8ynpavfyA6?g_st=al" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="room-card">
+              <h3>卡加利的住宿</h3>
+              <div class="room-img-card">
+              <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1012520233353505857/original/ac8d7410-0ba0-4c41-bc9d-d55fd33bc5b5.jpeg?im_w=960" alt="卡加利的住宿">
+              <div class="date-tag">9/17~9/18</div></div>
+              <div class="room-info">
+                <p>珊瑚泉湖濱度假屋</p>
+                <p class="note">7間臥室 7張床 3.5間衛浴</p>
+                <a href="https://www.airbnb.com.tw/rooms/1012520233353505857?adults=14&check_in=2025-09-17&check_out=2025-09-19&children=2&guests=9&search_mode=regular_search&source_impression_id=p3_1748359058_P3ABlqmkgVYGzUtq&previous_page_section_name=1000&federated_search_id=9b7ceb75-f370-43b5-b538-304cf7afe168" target="_blank"><i class="bi bi-house-door-fill"></i>airbnb</a><a href="https://maps.app.goo.gl/AroKKfswnKxdL8fBA?g_st=al" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div id="photopoint" class="day-section">
+    <div class="photopoint-section">
+            <h3>溫哥華 Vancouver</h3>
+            <div class="photopoint-card">
+              <img src="https://a0.muscache.com/im/pictures/be9a367d-b914-4a38-ba5d-47297fd432f2.jpg?im_w=960" alt="溫哥華住宿">
+              <div class="photopoint-info">
+                <p>景點名稱</p>
+                <div class="score"><p>價格</p><p>推薦星等</p></div>
+                <p class="note">說明、備註</p>
+                <a href="https://maps.app.goo.gl/LKWPi6FYYkHYu7AK9?g_st=al" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            
+            <h3>賈斯柏國家公園<br>Jasper National Park</h3>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npJHBFpOaT8A30v5LbYbLMJNXGvv69z9En3cRUBewL9AeJ0xsf88CyxN2PnH25gNgCtlEVDvXpwtNfqQOa5Ll5z9mBNlnWnmHhNa9lTi1sDQj4FjarQ48N4oCJ11XkD8ryFRviS=w408-h544-k-no" alt="Maligne Canyon">
+              <div class="photopoint-info">
+                <p>Maligne Canyon</p>
+                <div class="score"><p>Free</p><p>4.8</p></div>
+                <p class="note">說明、備註</p>
+                <a href="https://maps.app.goo.gl/M31ubGyEH7Hv1pRx7" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrNeLOMw8imDdb4sLWhlDlVTKt7KhOAtVwCIymw7KZX3FOKTrQ73vk4mQah6AVrnmfLUDmohxcHp0hlW8b3CTKjhQe3-X17Tiv3N95O0QWOJwv30vsVUsFPFK-czJQFnDnpIAqA=w408-h272-k-no" alt="Medicine Lake">
+              <div class="photopoint-info">
+                <p>Medicinde Lake</p>
+                <div class="score"><p>Free</p><p>4.6</p></div>
+                <p class="note">說明、備註</p>
+                <a href="https://www.google.com/maps/place/Medicine+Lake" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqt5V_9VegrbDbroF3nyB67ZeOFWYcdqrQpg0QkkSyp5yr0SS-n4ktxm3xMYLoSvaTperyq0Vv1b4eQKy0_25ssKy5yizIBrHfdfTulBqWLV-sDihc5fu2Qb_QnG154HGoSZziCTA=w408-h272-k-no" alt="馬林湖">
+              <div class="photopoint-info">
+                <p>Maligne Lake</p>
+                <div class="score"><p>Free</p><p>4.8</p></div>
+                <p class="note">可購買馬林湖遊船票（Maligne Lake Cruise）乘船遊湖</p>
+                <a href="https://maps.google.com/?q=Maligne+Lake" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/p/AF1QipOupLgeTdI8VASeVFavi6oLqbzEUg8LZZW63-0=w408-h272-k-no" alt="Jasper house national historic site">
+              <div class="photopoint-info">
+                <p>Jasper house national historic site</p>
+                <div class="score"><p>Free</p><p>4.2</p></div>
+                <p class="note">說明、備註</p>
+                <a href="https://maps.app.goo.gl/8vpRWzobqDXQpVTd6" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqwk3wUmF_02ACfy2nqyKVG71d-o-E8A-UJB0-2ESR2g36H_b2q-Ny7TABSE2NEyToD6tINoj-TKE5P_g1Tm4WUNfFsIQOrFLJCY0l2nDU-Rm-4Rmr_WmMHp8hvhZcDyCxnRHxJBQ=w408-h306-k-no" alt="Jasper lake San dunes">
+              <div class="photopoint-info">
+                <p>Jasper lake San dunes</p>
+                <div class="score"><p>Free</p><p>4.8</p></div>
+                <p class="note">說明、備註</p>
+                <a href="https://maps.app.goo.gl/JFxJip8pXEELod3u9" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqbk-fylvXV71qdLzv2dgm5Ph-RzU5zIG1pNSOecTpfX4xfdHlDuSaxXinWcoPGqVHRBHET8FBo1jnBNZ44PR9__oxQ9F3JJP8HMoI_GldbzGQ3Ua8eCKUMAzOGo7G1mSqBiAZPGg=w408-h306-k-no" alt="Jasper SkyTram">
+              <div class="photopoint-info">
+                <p>Jasper SkyTram</p>
+                <div class="score"><p>CAD 77</p><p>4.6</p></div>
+                <p class="note">說明、備註</p>
+                <a href="https://maps.app.goo.gl/kgYPdZrkdLqvyAbC7" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noHgQQxrcLtAir1sQ4HSmvO6LGN_l2241DmVo77tq9gUuigehF2Uwy5BFXtXD7VaemnpQ-FqfKyOzweI93uC-pCBEx28okLNbvD4lTlWSp53UscfAKjOnZRiQX8lxCCyMvpg44=w408-h272-k-no" alt="Athabasca Falls">
+              <div class="photopoint-info">
+                <p>Athabasca Falls</p>
+                <div class="score"><p>Free</p><p>4.8</p></div>
+                <p class="note">說明、備註</p>
+                <a href="https://maps.app.goo.gl/NJD46a1MZgmZ9XuP6" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq2Y76Qeqj74s_JkwFHrUiHqOaNzIt2w7P_VkKLCXCBRYxfP8mRfb9o4uteP3YljpnzqD6R6xWd_WdCQxyNcVFC-EBA_PWJD3x0a78qfEi-rDsZTtDUM7tyzi0yLcdMGJDz3wAqiA=w408-h306-k-no" alt="Sunwapta Falls">
+              <div class="photopoint-info">
+                <p>Sunwapta Falls</p>
+                <div class="score"><p>Free</p><p>4.8</p></div>
+                <p class="note">說明、備註</p>
+                <a href="https://maps.app.goo.gl/UcuEfBugLQgCLidu9" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npPqwWwJ6Ct-cJ877eTmdXldZ5UkmzSr0qxOLPgCkqPutsFJ-E-0BeUQ1ciJfPUiJlEdM57k_0oHn0ysDOrS8tEMdedST4r5ukpKuioT2X8E-5Fe_BdIYEqOCy4jyt1AIUF8ek=w408-h306-k-no" alt="哥倫比亞冰原">
+              <div class="photopoint-info">
+                <p>哥倫比亞冰原</p>
+                <div class="score"><p>Free</p><p>4.8</p></div>
+                <p class="note">可加購冰原天空步道票（Glacier Skywalk）、冰原雪車票（Ice Explorer）</p>
+                <a href="https://maps.app.goo.gl/gsXTevFgAHYrP7w99" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <h3>幽鶴國家公園<br>Yoho National Park Of Canada</h3>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqYCnJCNWM2J3LsEnV9DGRWCU0JKgkE_mhiDlatyqwqg9qERc18vBf12ZKfp403-4EVlitcPClJ2h1kv-I15x6TiHNUovOED6K--tYfYRQaVK_xum5Rsn9w5oRL7g5dsNPfvTGY=w408-h306-k-no" alt="翡翠湖">
+              <div class="photopoint-info">
+                <p>Emerald Lake</p>
+                <div class="score"><p>Free</p><p>4.8</p></div>
+                <p class="note">可租借獨木舟</p>
+                <a href="https://maps.app.goo.gl/dktoj6h5icdC1ac5A" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npgZBixmlUdz6DRotggN4sgTyGZN9CKYx3by9BL9NU4xOq8Vs_QJf54u16IsnXg8gtlS_-XV5FFwU1ARM4XWO2NYrQst_ftJThmfjo9gqx1AawVpTP1MZ5PN1elP7Jsuxw-W5BuNA=w408-h281-k-no" alt="Natural bridge">
+              <div class="photopoint-info">
+                <p>Natural bridge</p>
+                <div class="score"><p>Free</p><p>4.7</p></div>
+                <p class="note"></p>
+                <a href="https://maps.app.goo.gl/q1qfXyQwjKsuUuC99" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqkiaVX8z7HIETrTcifF50htxbTiTuUbbAVqOiYArkVn4uuznJSUMDqxO8cTP3XHPH083UG_VlimuXT-KEfEcRaCVzdtgkQEjpgM-t0-TyEZoKZdnzxisgeGKGCuTKg5qfkzwqJ=w408-h306-k-no" alt="塔卡考娃瀑布">
+              <div class="photopoint-info">
+                <p>Takakkaw falls</p>
+                <div class="score"><p>Free</p><p>4.9</p></div>
+                <p class="note"></p>
+                <a href="https://maps.app.goo.gl/8QVYKxMiFWCxLxJfA" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <h3>班夫國家公園<br>Banff National Park</h3>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrqycjqyaRHUIMmp5ibwe8RxVDFU3YHNz8AzKaSoo8IatXun1N6ViMz04xfSC9uoYkj8-ZzLtaNwB1tlIzAt0S5FHnObdrJrIsCET5aUPsrFA9Jj024IdBA8pvLu8RHalBjcyet=w408-h272-k-no" alt="沛托湖">
+              <div class="photopoint-info">
+                <p>Peyto Lake</p>
+                <div class="score"><p>Free</p><p>4.9</p></div>
+                <p class="note"></p>
+                <a href="https://maps.app.goo.gl/G2aERmLCxdsP1Kob8" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img src="https://lh3.googleusercontent.com/p/AF1QipN5lp-VNc1N5V84PVdyuQ_uhECJepyR9rCx1CD6=w408-h271-k-no" alt="Johnston Canyon">
+              <div class="photopoint-info">
+                <p>Johnston Canyou</p>
+                <div class="score"><p>Free</p><p>4.7</p></div>
+                <p class="note">可健行至Lower Falls、Upper Falls</p>
+                <a href="https://maps.app.goo.gl/fcC86HKhuTb8oghB9" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npo_2sH31Sb2qeFCWdcrXqTdY65IqKr6B6fjNJlpIKR08Wcqw7vCxPaSbwZdsRHGr4q8QKWoS7QhDA3Jfj9rNoM_SxFF68nEEYkW6Cp85S067lDd2H-YMbw_2FTZ1gzc1X_wwEm=w408-h725-k-no" alt="路易斯湖">
+              <div class="photopoint-info">
+                <p>Lake Louise</p>
+                <div class="score"><p>Free</p><p>4.7</p></div>
+                <p class="note">可健行至Lower Falls、Upper Falls</p>
+                <a href="https://maps.app.goo.gl/pCm2JuGv9QfsbL3e7" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <div class="photopoint-card">
+              <img class="imgstyle" src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npK2-UCWLuxuL2T9AgS7c9QttdWqU-KLnsSkmjtPrk0rr78CNYCNybzbz4g5FGGZSMsQr5o2Czul65erIug9Zzn_fc_E7iI-3ZWPKS7q1jygBqjkbOzDIj-n57Im_bFrN3DW00=w408-h306-k-no" alt="夢蓮湖">
+              <div class="photopoint-info">
+                <p>Moraine lake</p>
+                <div class="score"><p>Free</p><p>4.7</p></div>
+                <p class="note">只能搭接駁車前往</p>
+                <a href="https://maps.app.goo.gl/6tN6AT1bv6yJ6ZCM8" target="_blank"><i class="bi bi-geo-alt-fill"></i>google map</a>
+              </div>
+            </div>
+            <h3>卡加利 Calgary</h3>
+            
+    </div>
+  </div>
+  <div id="weather" class="day-section">
+    <div class="weather-info">
+      <h3>各地天氣資訊</h3>
+    <a class="weatherwidget-io" href="https://forecast7.com/en/49d28n123d12/vancouver/" data-label_1="VANCOUVER" data-label_2="溫哥華" data-font="Noto Sans" data-theme="fall-leaves" >VANCOUVER 溫哥華</a>
+    <a class="weatherwidget-io" href="https://forecast7.com/en/51d05n114d07/calgary/" data-label_1="CALGARY" data-label_2="卡加利" data-font="Noto Sans" data-theme="retro-sky" >CALGARY 卡加利</a>
+    <a class="weatherwidget-io" href="https://forecast7.com/en/52d87n118d08/jasper/" data-label_1="JASPER" data-label_2="賈斯柏" data-font="Noto Sans" data-theme="blue-mountains" >JASPER 賈斯柏</a>
+    <a class="weatherwidget-io" href="https://forecast7.com/en/51d18n115d57/banff/" data-label_1="BANFF" data-label_2="班夫" data-font="Noto Sans" data-theme="mountains" >BANFF 班夫</a>   
+    </div>
+  </div>
+</div>
+  <script>
+    function showDay(dayId) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const sections = document.querySelectorAll('.day-section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(dayId).classList.add('active');
+    }
+  // 設定旅遊出發日期
+  const targetDate = new Date("2025-09-07T23:30:00").getTime();
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "出發日已到！";
+      return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+  }
+  // 每秒更新一次倒數計時
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // 初始執行
+
+  //天氣
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+
+  
+  </script>
+</body>
+</html>

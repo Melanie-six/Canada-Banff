@@ -1,0 +1,353 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+body{
+    font-family: "Noto Sans TC";
+    background-color: #f0f4f8;
+}
+header{
+    background-image: url("https://pcweb2.azureedge.net/-/media/pn-np/ab/banff/WET4/HomePage/bnp-summer-2025-banner-1920x480.jpg?modified=20250512203652");
+    background-position: center;
+    background-size: 100%;
+    color: white;
+    text-align: center;
+}
+.countdown-timer{
+    font-size: 0.8rem;
+    color: #1e3e5f;
+    padding: 0.5rem;
+    text-align: right;
+}
+h1{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #e3f2fd;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+nav button {
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    background-color: #bbdefb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: #51a9f2;
+    }
+}
+.contanier{
+    width: 70vw;
+    margin: 0 auto;
+}
+@media (max-width:770px){
+    .contanier{
+        width: 100%;
+    }
+}
+.day-section{
+    display: none;
+    padding: 8px;
+}
+.day-section.active{
+    display: block;
+}
+.activity{
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid rgb(207, 205, 205);
+}
+.activity h3{
+    font-weight: bold;
+    font-size: 1.17em;
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+.map-link{
+    margin-top: 0.5rem;
+}
+.map-link a{
+    color: #0d47a1;
+    text-decoration: none;
+}
+.transtime{
+    text-align: center; 
+    margin: 1rem 0;
+}
+.tourist_spot{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.timestyle{
+    font-weight: bold;
+    color: rgb(150, 150, 150);
+    margin-bottom: 0.5rem;
+}
+.viewstyle{
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 1rem; 
+    margin-top: 1rem;
+}
+.viewpoint{
+    flex: 1 1 90px; 
+    background-color: #ffffff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 0.8rem; 
+    text-align: center;     
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+    background-color: #e3f2fd;
+    }
+}
+.overview_emo{
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+}
+
+
+.calendar-nav, .accommodation-section, .weather-info, .photopoint-section{
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgb(207, 205, 205);
+}
+.calendar-day{
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+    background-color: #e3f2fd;
+    }
+}
+.calendar-left{
+    position: relative;
+    flex-shrink: 0;
+    width: 30%;
+}
+.calendar-left img{
+    height: 80px;
+    border-radius: 8px;
+}
+.tag{
+    position: absolute;
+    top: 0.2rem;
+    left: -1rem;
+    background-color: rgb(245, 73, 73);
+    color: white;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    border-radius: 0 12px 12px 0;
+    line-height: 1.2;
+}
+.calendar-right{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    align-items: start;
+}
+.goback{
+    margin-top: 1rem;
+    padding: 0.75rem;
+    text-align: right;
+}
+.goback button{
+    border: 1px solid #aac6e9;
+    background: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.room-card{
+    margin-bottom: 3rem;
+    line-height: 1.5;
+}
+.room-img-card{
+    position: relative;
+}
+.room-img-card img{
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+.date-tag{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: rgb(238, 238, 238);
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    line-height: 1.2;
+}
+.room-card h3, .weather-info h3, .photopoint-section h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.note{
+    font-size: 0.9rem;
+    color:gray; 
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+.room-info a, .photopoint-info a{
+    text-decoration: none;
+    margin-right: 1rem;
+    background: #51a9f2;
+    color:white;
+    padding: 0.1rem 0.4rem;
+    border-radius: 1rem;
+    &:hover{
+        color:#51a9f2;
+        background: white;
+    }
+}
+.planA, .planB{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #51a9f2;
+    border-radius: 12px;
+}
+.planAB{
+    display: flex;
+    padding: 20px 0;
+    gap: 10px;
+}
+.planA .tourist_spot, .planB .tourist_spot{
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.planstyle{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: rgb(66, 69, 244);
+}
+.iconstyle{
+    font-size: 2rem; 
+    width: 60px; 
+    text-align: center; 
+    margin-right: 1rem;
+}
+.imgstyle{
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center; 
+    display: block;
+    margin-right: 8px;
+}
+.weather-info .weatherwidget-io{
+    margin-bottom: 8px;
+    border-radius: 12px;
+}
+.photopoint-card{
+    padding: 8px;
+    border: 1px solid #51a9f2;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+.photopoint-card img{
+    border-radius: 12px;
+    margin-bottom: 8px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center; 
+    display: block;
+}
+.score{
+    display: flex;
+    justify-content: space-between;
+    color:rgb(199, 134, 3);
+}
+.weather-info h3, .photopoint-section h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    line-height: 1.2;
+}
