@@ -1212,40 +1212,18 @@
     <a class="weatherwidget-io" href="https://forecast7.com/en/51d18n115d57/banff/" data-label_1="BANFF" data-label_2="班夫" data-font="Noto Sans" data-theme="mountains" >BANFF 班夫</a>   
     </div>
   </div>
+  <div id="shopping" class="day-section">
+    <div class="exchange-rate">
+      <section class="exchange-tool">
+        <h2>加幣兌換台幣</h2>
+        <label for="cadInput">輸入加幣金額 (CAD)：</label>
+        <input type="number" id="cadInput" placeholder="例如：100">
+        <button onclick="convertToTWD()">換算</button>
+        <p id="result"></p>
+      </section>
+    </div>
+  </div>
 </div>
-  <script>
-    function showDay(dayId) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      const sections = document.querySelectorAll('.day-section');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(dayId).classList.add('active');
-    }
-  // 設定旅遊出發日期
-  const targetDate = new Date("2025-09-07T23:30:00").getTime();
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-    if (distance < 0) {
-      document.getElementById("countdown").innerHTML = "出發日已到！";
-      return;
-    }
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
-  }
-  // 每秒更新一次倒數計時
-  setInterval(updateCountdown, 1000);
-  updateCountdown(); // 初始執行
-
-  //天氣
-  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-
-  
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

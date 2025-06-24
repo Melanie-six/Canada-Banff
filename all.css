@@ -351,3 +351,22 @@ nav button {
     margin-top: 12px;
     line-height: 1.2;
 }
+
+.exchange-tool {
+  background-color: #f4f4f4;
+  padding: 1em;
+  margin: 2em 0;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.exchange-tool input {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  width: 100px;
+}
+
+.exchange-tool button {
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
