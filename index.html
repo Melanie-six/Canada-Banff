@@ -1214,13 +1214,20 @@
   </div>
   <div id="shopping" class="day-section">
     <div class="exchange-rate">
-      <section class="exchange-tool">
-        <h2>加幣兌換台幣</h2>
-        <label for="cadInput">輸入加幣金額 (CAD)：</label>
-        <input type="number" id="cadInput" placeholder="例如：100">
-        <button onclick="convertToTWD()">換算</button>
-        <p id="result"></p>
-      </section>
+      <div class="card">
+        <h3>加幣兌換台幣</h3>
+        <p class="note">即時匯率</p>
+        <p id="rate-display">載入中...</p>
+        <p id="last-updated" class="note"></p>
+
+        <label for="cadInput">加幣 (CAD) 金額</label>
+        <input type="number" id="cadInput" placeholder="輸入加幣金額">
+
+        <label for="twdOutput">台幣 (TWD) 結果</label>
+        <input type="text" id="twdOutput" placeholder="兌換後的台幣金額" readonly>
+
+        <button class="refreshrate" onclick="refreshRate()"><i class="bi bi-arrow-clockwise"></i>重新整理匯率</button>
+      </div>
     </div>
   </div>
 </div>

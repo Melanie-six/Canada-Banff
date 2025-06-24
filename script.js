@@ -1,30 +1,10 @@
-async function convertToTWD() {
-  const amount = parseFloat(document.getElementById("cadInput").value);
-  if (isNaN(amount)) {
-    document.getElementById("result").textContent = "請輸入有效的數字";
-    return;
-  }
-
-  try {
-    const response = await fetch('https://api.exchangerate.host/latest?base=CAD&symbols=TWD');
-    const data = await response.json();
-    const rate = data.rates.TWD;
-    const result = amount * rate;
-
-    document.getElementById("result").textContent =
-      `${amount} 加幣 ≈ ${result.toFixed(2)} 台幣（匯率：${rate.toFixed(2)}）`;
-  } catch (error) {
-    document.getElementById("result").textContent = "取得匯率失敗，請稍後再試";
-    console.error("錯誤：", error);
-  }
-}
-
   function showDay(dayId) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       const sections = document.querySelectorAll('.day-section');
       sections.forEach(section => section.classList.remove('active'));
       document.getElementById(dayId).classList.add('active');
     }
+//旅遊倒數工具
   // 設定旅遊出發日期
   const targetDate = new Date("2025-09-07T23:30:00").getTime();
   function updateCountdown() {
@@ -47,7 +27,39 @@ async function convertToTWD() {
   setInterval(updateCountdown, 1000);
   updateCountdown(); // 初始執行
 
-  //天氣
+//天氣工具
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 
-  
+//匯率兌換工具
+  let currentRate = null;
+  let lastUpdate = null;
+
+  // 初始化：抓匯率並設定輸入框反應
+  async function refreshRate() {
+    const response = await fetch("https://open.er-api.com/v6/latest/CAD");
+    const data = await response.json();
+
+    if (data.result === "success") {
+      currentRate = data.rates.TWD;
+      lastUpdate = new Date(data.time_last_update_utc);
+      updateRateDisplay();
+    } else {
+      document.getElementById("rate-display").textContent = "匯率載入失敗";
+    }
+  }
+
+  function updateRateDisplay() {
+    document.getElementById("rate-display").textContent =
+      `1 CAD = ${currentRate.toFixed(2)} TWD`;
+    document.getElementById("last-updated").textContent =
+      `最後更新時間：${lastUpdate.toLocaleString("zh-TW")}`;
+  }
+
+  document.getElementById("cadInput").addEventListener("input", () => {
+    const amount = parseFloat(document.getElementById("cadInput").value);
+    const twd = isNaN(amount) ? "" : (amount * currentRate).toFixed(2);
+    document.getElementById("twdOutput").value = twd;
+  });
+
+  // 頁面載入時自動執行
+  refreshRate();
