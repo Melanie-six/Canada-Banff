@@ -1215,18 +1215,29 @@
   <div id="shopping" class="day-section">
     <div class="exchange-rate">
       <div class="card">
-        <h3>加幣兌換台幣</h3>
-        <p class="note">即時匯率</p>
-        <p id="rate-display">載入中...</p>
-        <p id="last-updated" class="note"></p>
+        <h3>匯率計算機</h3>
+        <div class="fromAtoB">
+          <label for="fromCurrency">從</label>
+          <select id="fromCurrency" onchange="updateLabels()">
+            <option value="CAD">加幣(CAD)</option>
+            <option value="USD">美金(USD)</option>
+            <option value="TWD">台幣(TWD)</option>
+          </select>
 
-        <label for="cadInput">加幣 (CAD) 金額</label>
-        <input type="number" id="cadInput" placeholder="輸入加幣金額">
+          <label for="toCurrency">兌換成</label>
+          <select id="toCurrency" onchange="updateLabels()">
+            <option value="TWD">台幣(TWD)</option>
+            <option value="CAD">加幣(CAD)</option>
+            <option value="USD">美金(USD)</option>
+          </select>
+        </div>
+        <label id="amountLabel" for="amountInput">加幣 (CAD) 金額</label>
+        <input type="number" id="amountInput" placeholder="輸入金額">
 
-        <label for="twdOutput">台幣 (TWD) 結果</label>
-        <input type="text" id="twdOutput" placeholder="兌換後的台幣金額" readonly>
+        <label id="resultLabel" for="convertedResult">台幣 (TWD) 結果</label>
+        <input type="text" id="convertedResult" placeholder="兌換後的金額" readonly>
 
-        <button class="refreshrate" onclick="refreshRate()"><i class="bi bi-arrow-clockwise"></i>重新整理匯率</button>
+        <button class="refreshrate" onclick="calculateExchange()"><i class="bi bi-arrow-clockwise"></i> 重新整理匯率</button>
       </div>
     </div>
   </div>

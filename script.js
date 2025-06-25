@@ -31,35 +31,64 @@
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 
 //匯率兌換工具
-  let currentRate = null;
-  let lastUpdate = null;
+let currentRates = {}; // 儲存目前匯率資料
 
-  // 初始化：抓匯率並設定輸入框反應
-  async function refreshRate() {
-    const response = await fetch("https://open.er-api.com/v6/latest/CAD");
+function updateLabels() {
+  const from = document.getElementById("fromCurrency").value;
+  const to = document.getElementById("toCurrency").value;
+
+  const currencyNames = {
+    CAD: "加幣 (CAD)",
+    USD: "美金 (USD)",
+    TWD: "台幣 (TWD)"
+  };
+
+  document.getElementById("amountLabel").textContent = `${currencyNames[from]} 金額`;
+  document.getElementById("resultLabel").textContent = `${currencyNames[to]} 結果`;
+
+  // 嘗試重新換算（在切換幣別時）
+  convertAndDisplay();
+}
+
+async function calculateExchange() {
+  const from = document.getElementById("fromCurrency").value;
+
+  try {
+    const response = await fetch(`https://open.er-api.com/v6/latest/${from}`);
     const data = await response.json();
 
-    if (data.result === "success") {
-      currentRate = data.rates.TWD;
-      lastUpdate = new Date(data.time_last_update_utc);
-      updateRateDisplay();
-    } else {
-      document.getElementById("rate-display").textContent = "匯率載入失敗";
+    if (data.result !== "success") {
+      throw new Error("匯率取得失敗");
     }
+
+    currentRates = data.rates;
+    convertAndDisplay(); // 換算顯示
+  } catch (error) {
+    document.getElementById("convertedResult").value = "錯誤，請稍後再試";
+    console.error(error);
+  }
+}
+
+function convertAndDisplay() {
+  const from = document.getElementById("fromCurrency").value;
+  const to = document.getElementById("toCurrency").value;
+  const amount = parseFloat(document.getElementById("amountInput").value);
+
+  if (!amount || isNaN(amount) || !currentRates[to]) {
+    document.getElementById("convertedResult").value = "";
+    return;
   }
 
-  function updateRateDisplay() {
-    document.getElementById("rate-display").textContent =
-      `1 CAD = ${currentRate.toFixed(2)} TWD`;
-    document.getElementById("last-updated").textContent =
-      `最後更新時間：${lastUpdate.toLocaleString("zh-TW")}`;
-  }
+  const rate = currentRates[to];
+  const converted = amount * rate;
+  document.getElementById("convertedResult").value = converted.toFixed(2);
+}
 
-  document.getElementById("cadInput").addEventListener("input", () => {
-    const amount = parseFloat(document.getElementById("cadInput").value);
-    const twd = isNaN(amount) ? "" : (amount * currentRate).toFixed(2);
-    document.getElementById("twdOutput").value = twd;
-  });
+// 綁定事件
+document.getElementById("fromCurrency").addEventListener("change", calculateExchange);
+document.getElementById("toCurrency").addEventListener("change", convertAndDisplay);
+document.getElementById("amountInput").addEventListener("input", convertAndDisplay);
 
-  // 頁面載入時自動執行
-  refreshRate();
+// 頁面初始化
+updateLabels();
+calculateExchange();
