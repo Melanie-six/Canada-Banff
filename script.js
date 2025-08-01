@@ -92,3 +92,9 @@ document.getElementById("amountInput").addEventListener("input", convertAndDispl
 // 頁面初始化
 updateLabels();
 calculateExchange();
+
+document.querySelectorAll('.checklist-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
+});

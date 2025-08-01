@@ -25,13 +25,13 @@
     <button onclick="showDay('overview')">首頁</button>
     <button onclick="showDay('calender')">行程</button>
     <button onclick="showDay('accommodation')">住宿</button>
-    <button onclick="showDay('restaurantn')">餐廳</button>
+    <button onclick="showDay('restaurant')">餐廳</button>
     <button onclick="showDay('photopoint')">景點</button>
     <button onclick="showDay('payactive')">活動</button>
     <button onclick="showDay('shopping')">工具</button>
-    <button onclick="showDay('package')">eTA</button>
+    <button onclick="showDay('package')">行李</button>
     <button onclick="showDay('weather')">天氣</button>
-    <button onclick="showDay('contact')">聯絡</button>
+    <button onclick="showDay('contact')">eTA</button>
   </nav>
 <div class="contanier">
   <div id="overview" class="day-section active">
@@ -58,13 +58,13 @@
              <p class="overview_emo">🛒</p><p>購物工具</p>
           </div>
           <div class="viewpoint" onclick="showDay('package')">
-             <p class="overview_emo">🪪</p><p>eTA教學</p>
+             <p class="overview_emo">🧳</p><p>行李清單</p>
           </div>
           <div class="viewpoint" onclick="showDay('weather')">
              <p class="overview_emo">🌤️</p><p>天氣資訊</p>
           </div>
           <div class="viewpoint" onclick="showDay('contact')">
-             <p class="overview_emo">☎️</p><p>緊急聯絡</p>
+             <p class="overview_emo">🪪</p><p>eTA教學</p>
           </div>
         </div>
     </div>
@@ -1039,6 +1039,21 @@
             </div>
     </div>
   </div>
+  <div id="restaurant" class="day-section">
+    <div class="restaurant-section">
+      <h3>坎莫爾 Canmore</h3>
+      <div class="restaurant-card">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noOoI0x1f2U4IlUpcXyd1pWCw8PSxt5YEScrB8tNGYRbPKG3ATeEbitxb7t2NtX2zooouZR__N9_GDn9jfhVYQfMhXkClgmX6MYkRpvLf55nckP7IRuFkKz-IqWwybPahqc2Yglfw=w408-h306-k-no" alt="Rocky Mountain Bagel Company">
+          <div class="restaurant-info">
+            <p class="noticeB">Rocky Mountain Bagel Company</p>
+            <div class="score"><p>CAD3.25~17.75</p><p>4.6</p></div>
+            <p class="note">分店一營業時間7~17、分店二營業時間6~16</p>
+            <a class="map" href="https://maps.app.goo.gl/DA4ZvdsB5ibaqbYp7" target="_blank"><i class="bi bi-geo-alt-fill"></i>分店一地圖</a>
+            <a class="map" href="https://maps.app.goo.gl/G6ozQCvQEb5mt2yE8" target="_blank"><i class="bi bi-geo-alt-fill"></i>分店二地圖</a>
+          </div>
+      </div>
+    </div>
+  </div>
   <div id="photopoint" class="day-section">
     <div class="photopoint-section">
             <h3>溫哥華 Vancouver</h3>
@@ -1297,8 +1312,8 @@
       </div>
     </div>
   </div>
-  <div id="package" class="day-section">
-    <div class="package-section">
+  <div id="contact" class="day-section">
+    <div class="contact-section">
       <h2>加拿大eTA申請流程</h2>
       <h3>什麼是eTA？</h3>
       <p>eTA是加拿大政府針對免簽證國家旅客（包括台灣）搭乘飛機入境加拿大的一項電子入境要求。</br>
@@ -1396,6 +1411,193 @@
     <a class="weatherwidget-io" href="https://forecast7.com/en/51d05n114d07/calgary/" data-label_1="CALGARY" data-label_2="卡加利" data-font="Noto Sans" data-theme="retro-sky" >CALGARY 卡加利</a>
     <a class="weatherwidget-io" href="https://forecast7.com/en/52d87n118d08/jasper/" data-label_1="JASPER" data-label_2="賈斯柏" data-font="Noto Sans" data-theme="blue-mountains" >JASPER 賈斯柏</a>
     <a class="weatherwidget-io" href="https://forecast7.com/en/51d18n115d57/banff/" data-label_1="BANFF" data-label_2="班夫" data-font="Noto Sans" data-theme="mountains" >BANFF 班夫</a>   
+    </div>
+  </div>
+  <div id="package" class="day-section">
+    <div class="package-section">
+      <h2>行李準備Checklist</h2>
+      <div class="package-menu">
+        <div class="package-card">
+          <h3>手提行李一</h3>
+          <ul class="checklist">
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>重要文件</li>
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>3C設備</li>
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>長途飛機需要</li>
+          </ul>
+        </div>
+        <div class="package-card">
+          <h3>手提行李二(兒童物品)</h3>
+          <ul class="checklist">
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>兒童耳機</li>
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>長途飛機需要</li>
+          </ul>
+        </div>
+        <div class="package-card">
+          <h3>託運行李一</h3>
+          <ul class="checklist">
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>個人衣物</li>
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>盥洗用品</li>
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>個人用品</li>
+          </ul>
+        </div>
+        <div class="package-card">
+          <h3>託運行李二</h3>
+          <ul class="checklist">
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>個人衣物</li>
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>藥品急救包</li>
+            <li class="checklist-item"><i class="bi bi-check2-square"></i>其他物品</li>
+          </ul>
+        </div>
+      </div>
+      <div class="checklist-menu">
+      <div class="checklist-card">
+        <h3>重要文件</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>身分證</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>國際駕照</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>電子機票</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>eTA</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>行程表</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>護照</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>外幣</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>信用卡</li>
+        </ul>
+      </div>
+      <div class="checklist-card">
+        <h3>個人衣物</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>衣服</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>褲子</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>襪子</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>內衣</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>內褲</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>帽子</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>外套</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>圍巾</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>拖鞋</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>涼鞋</li>
+        </ul>
+      </div>
+      <div class="checklist-card">
+        <h3>盥洗用品</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>牙刷</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>牙膏</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>牙間刷</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>牙線棒</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>洗髮精</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>沐浴乳</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>浴巾</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>吹風機</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>洗面乳</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>指甲剪</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>掏耳棒</li>
+        </ul>
+      </div>
+      <div class="checklist-card">
+        <h3>個人用品</h3>
+        <svg class="listicon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1a5ddc"><path d="M800-800v240h-80v-103L561-505q19 28 29 59.5t10 65.5q0 92-64 156t-156 64q-92 0-156-64t-64-156q0-92 64-156t156-64q33 0 65 9.5t59 29.5l159-159H560v-80h240ZM380-520q-58 0-99 41t-41 99q0 58 41 99t99 41q58 0 99-41t41-99q0-58-41-99t-99-41Z"/></svg>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>刮鬍刀</li>
+        </ul>
+        <svg class="listicon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FF5959"><path d="M440-120v-80h-80v-80h80v-84q-79-14-129.5-75.5T260-582q0-91 64.5-154.5T480-800q91 0 155.5 63.5T700-582q0 81-50.5 142.5T520-364v84h80v80h-80v80h-80Zm40-320q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41Z"/></svg>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>潤髮乳</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>梳子</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>衛生棉</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>護墊</li>
+        </ul>
+        <svg class="listicon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B959FF"><path d="M580-490q-21 0-35.5-14.5T530-540q0-21 14.5-35.5T580-590q21 0 35.5 14.5T630-540q0 21-14.5 35.5T580-490Zm-200 0q-21 0-35.5-14.5T330-540q0-21 14.5-35.5T380-590q21 0 35.5 14.5T430-540q0 21-14.5 35.5T380-490Zm100 210q-60 0-108.5-33T300-400h360q-23 54-71.5 87T480-280Zm0 160q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-480q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-120Zm0-80q116 0 198-82t82-198q0-116-82-198t-198-82h-12q-6 0-12 2-6 6-8 13t-2 15q0 21 14.5 35.5T496-680q9 0 16.5-3t15.5-3q12 0 20 9t8 21q0 23-21.5 29.5T496-620q-45 0-77.5-32.5T386-730v-6q0-3 1-8-83 30-135 101t-52 163q0 116 82 198t198 82Zm0-280Z"/></svg>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>洗髮沐浴乳</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>指甲剪</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>乳液</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>屁屁膏</li>
+        </ul>
+      </div>
+      <div class="checklist-card">
+        <h3>3C設備</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>筆電</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>行動電源</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>相機</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>藍芽喇叭</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>充電器轉接頭</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>typeC線</li>
+        </ul>
+        <svg class="listicon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B959FF"><path d="M580-490q-21 0-35.5-14.5T530-540q0-21 14.5-35.5T580-590q21 0 35.5 14.5T630-540q0 21-14.5 35.5T580-490Zm-200 0q-21 0-35.5-14.5T330-540q0-21 14.5-35.5T380-590q21 0 35.5 14.5T430-540q0 21-14.5 35.5T380-490Zm100 210q-60 0-108.5-33T300-400h360q-23 54-71.5 87T480-280Zm0 160q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-480q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-120Zm0-80q116 0 198-82t82-198q0-116-82-198t-198-82h-12q-6 0-12 2-6 6-8 13t-2 15q0 21 14.5 35.5T496-680q9 0 16.5-3t15.5-3q12 0 20 9t8 21q0 23-21.5 29.5T496-620q-45 0-77.5-32.5T386-730v-6q0-3 1-8-83 30-135 101t-52 163q0 116 82 198t198 82Zm0-280Z"/></svg>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>兒童耳機</li>
+        </ul>
+      </div>
+      <div class="checklist-card">
+        <h3>藥品急救包</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>OK蹦</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>伏冒熱飲</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>3M透氣繃帶</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>紗布棉花棒</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>普拿疼</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>止瀉藥</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>暈車藥</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>防蚊液</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>防曬乳</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>耳溫槍</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>口罩</li>
+        </ul>
+        <svg class="listicon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B959FF"><path d="M580-490q-21 0-35.5-14.5T530-540q0-21 14.5-35.5T580-590q21 0 35.5 14.5T630-540q0 21-14.5 35.5T580-490Zm-200 0q-21 0-35.5-14.5T330-540q0-21 14.5-35.5T380-590q21 0 35.5 14.5T430-540q0 21-14.5 35.5T380-490Zm100 210q-60 0-108.5-33T300-400h360q-23 54-71.5 87T480-280Zm0 160q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-480q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-120Zm0-80q116 0 198-82t82-198q0-116-82-198t-198-82h-12q-6 0-12 2-6 6-8 13t-2 15q0 21 14.5 35.5T496-680q9 0 16.5-3t15.5-3q12 0 20 9t8 21q0 23-21.5 29.5T496-620q-45 0-77.5-32.5T386-730v-6q0-3 1-8-83 30-135 101t-52 163q0 116 82 198t198 82Zm0-280Z"/></svg>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>退燒藥</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>止吐藥</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>止瀉藥</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>流鼻水藥</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>濕疹藥膏</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>止癢藥膏</li>
+        </ul>
+      </div>
+      <div class="checklist-card">
+        <h3>長途飛機需要</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>眼罩</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>耳塞</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>頸枕</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>牙刷</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>牙膏</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>拖鞋</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>口罩</li>
+        </ul>
+        <svg class="listicon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B959FF"><path d="M580-490q-21 0-35.5-14.5T530-540q0-21 14.5-35.5T580-590q21 0 35.5 14.5T630-540q0 21-14.5 35.5T580-490Zm-200 0q-21 0-35.5-14.5T330-540q0-21 14.5-35.5T380-590q21 0 35.5 14.5T430-540q0 21-14.5 35.5T380-490Zm100 210q-60 0-108.5-33T300-400h360q-23 54-71.5 87T480-280Zm0 160q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-480q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-120Zm0-80q116 0 198-82t82-198q0-116-82-198t-198-82h-12q-6 0-12 2-6 6-8 13t-2 15q0 21 14.5 35.5T496-680q9 0 16.5-3t15.5-3q12 0 20 9t8 21q0 23-21.5 29.5T496-620q-45 0-77.5-32.5T386-730v-6q0-3 1-8-83 30-135 101t-52 163q0 116 82 198t198 82Zm0-280Z"/></svg>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>蘑菇被被</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>安撫玩偶</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>貼紙書</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>磁鐵書</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>繪本</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>水畫本</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>玩具</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>寶寶零食</li>
+        </ul>
+      </div>
+      <div class="checklist-card">
+        <h3>其他物品</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>休足時間</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>洗衣袋</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>護手霜</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>護唇膏</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>墨鏡</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>雨衣</li>
+        </ul>
+        <svg class="listicon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B959FF"><path d="M580-490q-21 0-35.5-14.5T530-540q0-21 14.5-35.5T580-590q21 0 35.5 14.5T630-540q0 21-14.5 35.5T580-490Zm-200 0q-21 0-35.5-14.5T330-540q0-21 14.5-35.5T380-590q21 0 35.5 14.5T430-540q0 21-14.5 35.5T380-490Zm100 210q-60 0-108.5-33T300-400h360q-23 54-71.5 87T480-280Zm0 160q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-480q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-120Zm0-80q116 0 198-82t82-198q0-116-82-198t-198-82h-12q-6 0-12 2-6 6-8 13t-2 15q0 21 14.5 35.5T496-680q9 0 16.5-3t15.5-3q12 0 20 9t8 21q0 23-21.5 29.5T496-620q-45 0-77.5-32.5T386-730v-6q0-3 1-8-83 30-135 101t-52 163q0 116 82 198t198 82Zm0-280Z"/></svg>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>餐具</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>水壺</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>濕紙巾</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>圍兜兜</li>
+          <li class="checklist-item"><i class="bi bi-check2-square"></i>尿布墊</li>
+        </ul>
+      </div>
+      </div>
     </div>
   </div>
   <div id="shopping" class="day-section">

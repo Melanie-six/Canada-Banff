@@ -179,7 +179,7 @@ nav button {
 }
 
 
-.calendar-nav, .accommodation-section, .weather-info, .photopoint-section, .exchange-rate, .package-section{
+.calendar-nav, .accommodation-section, .weather-info, .photopoint-section, .exchange-rate, .restaurant-section, .contact-section, .package-section{
     gap: 0.5rem;
     padding: 0.75rem;
     border-radius: 8px;
@@ -272,7 +272,7 @@ nav button {
     margin-top: 0.4rem;
     margin-bottom: 0.8rem;
 }
-.room-info a, .photopoint-info a{
+.room-info a, .photopoint-info a, .restaurant-info .map{
     text-decoration: none;
     margin-right: 1rem;
     background: #51a9f2;
@@ -328,13 +328,13 @@ nav button {
     margin-bottom: 8px;
     border-radius: 12px;
 }
-.photopoint-card{
+.photopoint-card, .restaurant-card{
     padding: 8px;
     border: 1px solid #51a9f2;
     border-radius: 12px;
     margin-bottom: 8px;
 }
-.photopoint-card img{
+.photopoint-card img, .restaurant-card img{
     border-radius: 12px;
     margin-bottom: 8px;
     width: 100%;
@@ -346,9 +346,10 @@ nav button {
 .score{
     display: flex;
     justify-content: space-between;
-    color:rgb(199, 134, 3);
+    color:rgb(179, 53, 24);
+    margin-top: 4px;
 }
-.weather-info h3, .photopoint-section h3, .exchange-rate h3, .package-section h3{
+.weather-info h3, .photopoint-section h3, .exchange-rate h3, .contact-section h3, .restaurant-section h3{
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 8px;
@@ -393,7 +394,7 @@ input {
     font-size: 18px;
     margin-bottom: 12px;
 }
-.package-section img{
+.contact-section img{
     width: 80%;
     margin-left: 10%;
     margin-top: 8px;
@@ -402,19 +403,19 @@ input {
     border: 1px solid #51a9f2;
 }
 @media (max-width:770px){
-    .package-section img{
+    .contact-section img{
         width: 100%;
         margin-left: 0;
     }
 }
-.package-section h2{
+.contact-section h2, .package-section h2{
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 8px;
     line-height: 1.2;
     font-family: "Noto Sans TC";
 }
-.package-section ul{
+.contact-section ul{
     list-style-type: disc;
     margin-left: 12px;
     padding-left: 12px;
@@ -428,4 +429,66 @@ input {
 }
 .noticeB{
     font-weight: bold;
+}
+.checklist-menu, .package-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.package-card, .checklist-card{
+    width: 24%;
+}
+@media (max-width:1250px){
+    .package-card, .checklist-card{
+    width: 49%;
+    }
+}
+@media (max-width:700px){
+    .package-card, .checklist-card{
+    width: 100%;
+    }
+}
+.checklist-card{
+    border: 1px solid #51a9f2;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+}
+.package-card{
+    border: 2px solid #36d6aed1;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+}
+.checklist-card h3, .package-card h3{
+    background-color: #51a9f2;
+    border-radius: 12px 12px 0 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 0 8px 8px;
+    line-height: 1.2;
+}
+.package-card h3{
+    background-color: #36d6aed1;
+}
+.checklist{
+    margin-bottom: 4px;
+}
+.checklist-item{
+    cursor: pointer;
+    margin-left: 16px;
+    margin-top: 4px;
+}
+.checklist-item:hover {
+    color: #1a5ddc;   
+}
+.checklist-item.active {
+      color: rgb(152, 152, 152);
+}
+.listicon{
+    width: 24px;
+    height: 24px;
+    vertical-align: text-bottom;
+    margin-left: 16px;
 }
