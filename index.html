@@ -66,6 +66,9 @@
           <div class="viewpoint" onclick="showDay('contact')">
              <p class="overview_emo">🪪</p><p>eTA教學</p>
           </div>
+          <div class="viewpoint" onclick="showDay('album')">
+             <p class="overview_emo">📷</p><p>相簿</p>
+          </div>
         </div>
     </div>
   </div>  
@@ -1560,6 +1563,9 @@
   <div id="package" class="day-section">
     <div class="package-section">
       <h2>行李準備Checklist</h2>
+      <p class="noticeR">長榮航空自2025年3月1日起，所有航班全程禁止使用及充電行動電源和備用鋰電池</p>
+      <p>禁止托運物品：備用鋰電池及行動電源、易燃和易爆物品</p>
+      <p>禁止隨身物品：攻擊性、刀剪尖銳物品、液體不得超過100毫升</p>
       <div class="package-menu">
         <div class="package-card">
           <h3>手提行李一</h3>
@@ -1773,7 +1779,49 @@
       </div>
     </div>
   </div>
+  <div id="album" class="day-section">
+    <div class="photopoint-section">
+      <h3>旅途回憶相簿</h3>
+      <p class="lead text-muted">點擊下方照片，一同回味我們的美好時光！<br>所有家人都可以上傳、下載照片喔！</p>
+      <div class="photopoint-card">
+        <a href="https://photos.app.goo.gl/Cv44zXPUzFQkrJV5A" target="_blank" class="gallery-link">
+        <img src="picture/photo_Banff.jpg" class="img-fluid rounded shadow" alt="精彩照片">
+        </a>
+      </div>
+      <div class="photopoint-info">
+        <a href="https://photos.app.goo.gl/Cv44zXPUzFQkrJV5A" target="_blank" class="btn btn-primary mt-4">
+          <i class="fas fa-camera-retro"></i> 進入共享相簿
+        </a>
+      </div>
+    </div>
+
+    <h2>家族相簿</h2>
+    <input type="file" id="fileInput" />
+    <button id="uploadBtn">上傳照片</button>
+    <div id="gallery"></div>
+
+  </div>
 </div>
   <script src="script.js" defer></script>
+  
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCLo8EuCx36nZ9-T9ZSFGb2cXqvkQa73Ig",
+    authDomain: "banff-photo-album.firebaseapp.com",
+    projectId: "banff-photo-album",
+    storageBucket: "banff-photo-album.firebasestorage.app",
+    messagingSenderId: "419522849632",
+    appId: "1:419522849632:web:18c0d44dfb85a560370c05"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
 </body>
 </html>
