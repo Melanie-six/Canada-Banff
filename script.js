@@ -106,6 +106,7 @@ document.querySelectorAll('.checklist-item').forEach(item => {
   const gallery = document.getElementById('gallery');
 
   uploadBtn.addEventListener('click', () => {
+    console.log("Upload button clicked");
     const file = fileInput.files[0];
     if (!file) return alert('請先選一張照片！');
 
