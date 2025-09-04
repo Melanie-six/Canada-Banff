@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyCLo8EuCx36nZ9-T9ZSFGb2cXqvkQa73Ig",
   authDomain: "banff-photo-album.firebaseapp.com",
   projectId: "banff-photo-album",
-  storageBucket: "banff-photo-album.appspot.com", // ⚠️ 這裡要改成 .appspot.com
+  storageBucket: "banff-photo-album.firebasestorage.app", // ⚠️ 這裡要改成 .appspot.com
   messagingSenderId: "419522849632",
   appId: "1:419522849632:web:18c0d44dfb85a560370c05"
 };
