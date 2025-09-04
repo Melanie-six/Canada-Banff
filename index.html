@@ -1795,19 +1795,24 @@
       </div>
     </div>
 
-    <h2>家族相簿</h2>
-    <input type="file" id="fileInput" />
-    <button id="uploadBtn">上傳照片</button>
+    <div id="auth-controls">
+    <div id="userInfo">請登入以上傳照片</div>
+    <button id="loginButton">使用 Google 登入</button>
+    <button id="logoutButton" style="display:none;">登出</button>
+    </div>
+    <hr>
+    <div id="uploadForm" style="display:none;">
+      <h3>上傳新照片</h3>
+      <input type="file" id="fileInput">
+      <button id="uploadBtn">上傳</button>
+    </div>
+    <hr>
+    <h2>相簿</h2>
     <div id="gallery"></div>
 
   </div>
 </div>
-  <script src="script.js" defer></script>
-  <!-- Firebase App (Compat 版本) -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
-
+<script src="script.js" defer></script>
 <script type="module" src="album.js"></script>
 
 </body>
