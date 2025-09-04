@@ -1782,7 +1782,8 @@
   <div id="album" class="day-section">
     <div class="photopoint-section">
       <h3>旅途回憶相簿</h3>
-      <p class="lead text-muted">點擊下方照片，一同回味我們的美好時光！<br>所有家人都可以上傳、下載照片喔！</p>
+      <p class="lead text-muted">點擊登入、上傳照片，一同回味我們的美好時光！</p>
+      <!--
       <div class="photopoint-card">
         <a href="https://photos.app.goo.gl/Cv44zXPUzFQkrJV5A" target="_blank" class="gallery-link">
         <img src="picture/photo_Banff.jpg" class="img-fluid rounded shadow" alt="精彩照片">
@@ -1793,22 +1794,24 @@
           <i class="fas fa-camera-retro"></i> 進入共享相簿
         </a>
       </div>
-    </div>
+      -->
+    
 
-    <div id="auth-controls">
-    <div id="userInfo">請登入以上傳照片</div>
+    <div id="auth-controls" class="albumlogin">
+    <div id="userInfo" >請登入以上傳照片</div>
     <button id="loginButton">使用 Google 登入</button>
     <button id="logoutButton" style="display:none;">登出</button>
     </div>
     <hr>
-    <div id="uploadForm" style="display:none;">
+    <div id="uploadForm" style="display:none;" class="albumlogin">
       <h3>上傳新照片</h3>
       <input type="file" id="fileInput">
       <button id="uploadBtn">上傳</button>
     </div>
     <hr>
-    <h2>相簿</h2>
+    <h3>相簿</h3>
     <div id="gallery"></div>
+    </div>
 
   </div>
 </div>

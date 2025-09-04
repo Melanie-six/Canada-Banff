@@ -492,3 +492,42 @@ input {
     vertical-align: text-bottom;
     margin-left: 16px;
 }
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.photo {
+  width: 200px;         /* 固定寬度 */
+  height: 200px;        /* 固定高度 */
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.photo:hover {
+  transform: scale(1.05);
+}
+.albumlogin{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    line-height: 1.2;
+}
+.albumlogin button{
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    background: #51a9f2;
+    border-color: #51a9f2;
+    color:white;
+    padding: 0.1rem 0.4rem;
+    border-radius: 1rem;
+    &:hover{
+        color:#51a9f2;
+        background: white;
+    }
+}
