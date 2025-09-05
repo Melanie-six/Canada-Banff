@@ -4,28 +4,6 @@
       sections.forEach(section => section.classList.remove('active'));
       document.getElementById(dayId).classList.add('active');
     }
-//旅遊倒數工具
-  // 設定旅遊出發日期
-  const targetDate = new Date("2025-09-07T23:30:00").getTime();
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-    if (distance < 0) {
-      document.getElementById("countdown").innerHTML = "出發日已到！";
-      return;
-    }
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
-  }
-  // 每秒更新一次倒數計時
-  setInterval(updateCountdown, 1000);
-  updateCountdown(); // 初始執行
 
 //天氣工具
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
@@ -98,3 +76,61 @@ document.querySelectorAll('.checklist-item').forEach(item => {
     item.classList.toggle('active');
   });
 });
+
+// --- [新增] 雙時區時鐘工具 ---
+
+// 取得顯示時間的 DOM 元素
+const taiwanClockDiv = document.getElementById("taiwan-clock");
+const vancouverClockDiv = document.getElementById("vancouver-clock");
+
+function updateWorldClocks() {
+  const now = new Date();
+
+  // --- 設定時間格式 ---
+  // 我們使用 Intl.DateTimeFormat 這個強大的內建工具來處理時區和格式
+  const options = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false // 使用 24 小時制
+  };
+
+  // --- 格式化台灣時間 ---
+  const taiwanFormatter = new Intl.DateTimeFormat('zh-TW', {
+    ...options,
+    timeZone: 'Asia/Taipei'
+  });
+  const taiwanParts = taiwanFormatter.formatToParts(now);
+  const taiwanDate = `${taiwanParts.find(p => p.type === 'year').value}/${taiwanParts.find(p => p.type === 'month').value}/${taiwanParts.find(p => p.type === 'day').value}`;
+  const taiwanTime = `${taiwanParts.find(p => p.type === 'hour').value}:${taiwanParts.find(p => p.type === 'minute').value}:${taiwanParts.find(p => p.type === 'second').value}`;
+
+  // --- 格式化溫哥華時間 ---
+  const vancouverFormatter = new Intl.DateTimeFormat('en-CA', {
+    ...options,
+    timeZone: 'America/Vancouver'
+  });
+  const vancouverParts = vancouverFormatter.formatToParts(now);
+  const vancouverDate = `${vancouverParts.find(p => p.type === 'year').value}-${vancouverParts.find(p => p.type === 'month').value}-${vancouverParts.find(p => p.type === 'day').value}`;
+  const vancouverTime = `${vancouverParts.find(p => p.type === 'hour').value}:${vancouverParts.find(p => p.type === 'minute').value}:${vancouverParts.find(p => p.type === 'second').value}`;
+
+  // --- 更新 HTML 內容 ---
+  taiwanClockDiv.innerHTML = `
+    <div class="location">台灣時間 (Taipei)</div>
+    <div class="time">${taiwanTime}</div>
+    <div class="date">${taiwanDate}</div>
+  `;
+  
+  vancouverClockDiv.innerHTML = `
+    <div class="location">當地時間 (Vancouver)</div>
+    <div class="time">${vancouverTime}</div>
+    <div class="date">${vancouverDate}</div>
+  `;
+}
+
+// 每秒更新一次時鐘
+setInterval(updateWorldClocks, 1000);
+// 立即執行一次，避免頁面載入時延遲一秒才顯示
+updateWorldClocks();

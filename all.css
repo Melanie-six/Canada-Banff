@@ -68,6 +68,13 @@ header{
     color: white;
     text-align: center;
 }
+@media (max-width: 480px) {
+  header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
 .countdown-timer{
     font-size: 0.8rem;
     color: #d6802a;
@@ -627,4 +634,37 @@ input {
     height: 25px;
     cursor: pointer;
     accent-color: #51a9f2; /* 讓勾選框的顏色跟主題色一致 */
+}
+/* --- [新增] 雙時區時鐘樣式 --- */
+
+#world-clocks {
+  display: flex; /* 使用 Flexbox 佈局 */
+  justify-content: space-between; /* 讓兩個元素一個靠左，一個靠右 */
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin: 4px 0; /* 與其他元素的間距 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.clock {
+  text-align: center;
+}
+
+.clock .location {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #6c757d; /* 較柔和的顏色 */
+}
+
+.clock .time {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40; /* 主要時間的顏色 */
+  letter-spacing: 1.5px; /* 增加字元間距，更有設計感 */
+}
+
+.clock .date {
+  font-size: 0.9rem;
+  color: #495057;
 }
