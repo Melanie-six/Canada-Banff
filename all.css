@@ -493,41 +493,138 @@ input {
     margin-left: 16px;
 }
 
+/* --- 您原有的樣式 (已包含並修正) --- */
 #gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
+  /* 這個樣式現在主要由 JS 動態生成的 .album-grid 和 #photo-grid 來取代 */
+  /* 我們可以保留它作為一個基礎容器的樣式 */
+  padding: 10px 0;
 }
+
 .photo {
-  width: 200px;         /* 固定寬度 */
-  height: 200px;        /* 固定高度 */
+  width: 100%;     /* 讓圖片寬度自適應容器，而不是固定 200px */
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s;
+  display: block; /* 確保圖片是塊級元素，避免底部出現小間隙 */
 }
+
 .photo:hover {
   transform: scale(1.05);
 }
-.albumlogin{
+
+.albumlogin {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  line-height: 1.2;
+}
+
+.albumlogin button {
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  background: #51a9f2;
+  border: 2px solid #51a9f2; /* 加上邊框，讓 hover 效果更好看 */
+  color: white;
+  padding: 0.1rem 0.6rem;
+  border-radius: 1rem;
+  cursor: pointer; /* 增加鼠標指針 */
+  transition: all 0.3s ease; /* 讓 hover 效果更平滑 */
+}
+
+/* 修正 :hover 語法，這是標準 CSS 的寫法 */
+.albumlogin button:hover {
+  color: #51a9f2;
+  background: white;
+}
+
+/* --- 以下是新增的樣式，以支援相簿和下載功能 --- */
+/* 1. 相簿封面樣式 */
+#gallery h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.album-cover {
+    height: 200px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.album-cover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.album-title {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px); /* 增加一點模糊效果，更有質感 */
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 8px;
-    margin-top: 12px;
-    line-height: 1.2;
 }
-.albumlogin button{
+/* 2. 相簿內頁樣式 */
+.album-header {
+    display: flex;
+    flex-wrap: wrap; /* 在小螢幕上換行 */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px; /* 在按鈕之間增加間隙 */
+}
+.album-header h2 {
+    margin: 0;
+}
+.album-header button {
+    /* 這裡可以複用您的按鈕樣式或自訂 */
     text-decoration: none;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    font-size: 1.1rem;
-    background: #51a9f2;
-    border-color: #51a9f2;
+    font-size: 1rem;
+    background: #6c757d;
+    border: 2px solid #6c757d;
     color:white;
-    padding: 0.1rem 0.4rem;
+    padding: 0.1rem 0.6rem;
     border-radius: 1rem;
-    &:hover{
-        color:#51a9f2;
-        background: white;
-    }
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.album-header button:hover{
+    background: white;
+    color: #6c757d;
+}
+#photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+.photo-container {
+    position: relative;
+    border-radius: 8px; /* 讓容器也有圓角 */
+    overflow: hidden; /* 隱藏超出圓角的圖片部分 */
+}
+.photo-checkbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px; /* 加大一點比較好點 */
+    height: 25px;
+    cursor: pointer;
+    accent-color: #51a9f2; /* 讓勾選框的顏色跟主題色一致 */
 }
